@@ -167,6 +167,7 @@
     <Folder Include="FrontLight" />
     <Folder Include="MotorDriver" />
     <Folder Include="MP3" />
+    <Folder Include="System" />
     <Folder Include="Underglow" />
     <Folder Include="RearLight" />
   </ItemGroup>
