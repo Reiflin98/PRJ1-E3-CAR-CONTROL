@@ -5,15 +5,22 @@
  *  Author: thoma
  */ 
 #include <avr/io.h>
-#include "DriveControl.h"
+
 
 void initSystem()
 {
-	
+	void initFrontLight(void);
+	void initUnderglow(void);
+	void initRearLight(void);
+	void initMP3(void);
+	void initMotor(void);
+
 }
 
 void driveControl()
 {
+	
+	
 	
 }
 
