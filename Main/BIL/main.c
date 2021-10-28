@@ -14,5 +14,6 @@ int main(void)
     while (1) 
     {
     }
+	// her starter det hele
 }
 
