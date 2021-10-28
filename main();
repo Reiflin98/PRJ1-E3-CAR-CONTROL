@@ -1,4 +1,0 @@
-int counter(int) = 0;
-
-initSystem()
-
