@@ -122,13 +122,28 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DriveControl\Drive.c">
+    <Compile Include="DriveControl\DriveControl.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="DriveControl\Drive.h">
+    <Compile Include="DriveControl\DriveControl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FrontLight\FrontLight.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MotorDriver\Motor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MP3\MP3.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RearLight\RearLight.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Underglow\Underglow.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
@@ -136,6 +151,8 @@
     <Folder Include="DriveControl" />
     <Folder Include="FrontLight" />
     <Folder Include="MotorDriver" />
+    <Folder Include="MP3" />
+    <Folder Include="Underglow" />
     <Folder Include="RearLight" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
