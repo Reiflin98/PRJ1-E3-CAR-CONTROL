@@ -131,19 +131,34 @@
     <Compile Include="FrontLight\FrontLight.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="FrontLight\FrontLight.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MotorDriver\Motor.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MotorDriver\Motor.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="MP3\MP3.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MP3\MP3.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="RearLight\RearLight.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="RearLight\RearLight.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Underglow\Underglow.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Underglow\Underglow.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
