@@ -16,6 +16,7 @@ int main(void)
     }
 	// her starter det hele
 	//Test
+	//Fak u Thomas
 }
 
 
