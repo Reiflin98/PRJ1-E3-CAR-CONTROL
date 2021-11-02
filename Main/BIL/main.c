@@ -6,6 +6,9 @@
  */ 
 
 #include <avr/io.h>
+#include "system.h"
+
+int counter = 0;
 
 
 int main(void)
@@ -13,10 +16,12 @@ int main(void)
     /* Replace with your application code */
     while (1) 
     {
+		if (true) // keypressed
+		{
+			system();
+		}
     }
-	// her starter det hele
-	//Test
-	//Fak u mongolos
+	
 }
 
 
