@@ -122,9 +122,6 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="system.c">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="DriveControl\DriveControl.c">
       <SubType>compile</SubType>
     </Compile>
@@ -156,9 +153,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="RearLight\RearLight.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="system.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Underglow\Underglow.c">

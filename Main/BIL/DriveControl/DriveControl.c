@@ -9,18 +9,16 @@
 
 void initSystem()
 {
-	void initFrontLight(void);
-	void initUnderglow(void);
-	void initRearLight(void);
-	void initMP3(void);
-	void initMotor(void);
-
+	driveControl()
 }
 
 void driveControl()
 {
-	
-	
-	
+	void initFrontLight();
+	void initRearLight();
+	void initUnderglow();
+	void initMP3();
+	void initMotor();
+		
 }
 

@@ -6,19 +6,26 @@
  */ 
 
 #include <avr/io.h>
-#include "system.h"
+#include "DriveControl.h"
 
 int counter = 0;
+void buttonIsPressed(void);
+
+// erklær *** knap til funktion
 
 
 int main(void)
 {
-    /* Replace with your application code */
+    buttonIsPressed = false;
+	
+	initSystem()
+	
     while (1) 
     {
-		if (true) // keypressed
+		if (buttonIsPressed(void)==true)
 		{
-			system();
+			driveControl(); //start driveControl / System
+			// nå system færdigt -> afvent nyt tryk 
 		}
     }
 	
