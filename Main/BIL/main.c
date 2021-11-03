@@ -28,6 +28,7 @@ int main(void)
 			// nå system færdigt -> afvent nyt tryk 
 		}
     }
+	// test
 	
 }
 
