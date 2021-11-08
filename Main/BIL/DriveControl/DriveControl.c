@@ -6,7 +6,7 @@
  */ 
 #include <avr/io.h>
 
-
+// fed pik
 void initSystem()
 {
 	void initFrontLight();
