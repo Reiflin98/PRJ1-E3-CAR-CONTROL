@@ -28,7 +28,7 @@ int main(void)
 			// nå system færdigt -> afvent nyt tryk 
 		}
     }
-	//Thomas er sku faktisk lidt grim
+	//Thomas er sku faktisk lidt grim v2.0
 	
 }
 
