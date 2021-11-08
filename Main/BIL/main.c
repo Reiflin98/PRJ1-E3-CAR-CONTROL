@@ -28,7 +28,7 @@ int main(void)
 			// nå system færdigt -> afvent nyt tryk 
 		}
     }
-	// test
+	//Thomas er sku faktisk lidt grim
 	
 }
 
