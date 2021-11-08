@@ -81,7 +81,8 @@ void driveControl()
 			break;
 			
 		}
-	}while (counter < 11); //Går ud af do-while når refliksbrik 7 er nået
+	}while ((counter < 11) || switchOn(1)<0); //Går ud af do-while når refliksbrik 7 er nået
+	
 	
 	carStop(); 
 	playStop();
@@ -89,5 +90,6 @@ void driveControl()
 	turnOffUnder();
 	turnOffFront();
 	turnOffRear();
+	counter = 0;
 }
 
