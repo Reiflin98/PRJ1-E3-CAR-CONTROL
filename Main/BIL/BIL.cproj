@@ -128,6 +128,12 @@
     <Compile Include="DriveControl\DriveControl.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\switch.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\switch.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="FrontLight\FrontLight.c">
       <SubType>compile</SubType>
     </Compile>
@@ -167,7 +173,7 @@
     <Folder Include="FrontLight" />
     <Folder Include="MotorDriver" />
     <Folder Include="MP3" />
-    <Folder Include="System" />
+    <Folder Include="Drivers" />
     <Folder Include="Underglow" />
     <Folder Include="RearLight" />
   </ItemGroup>
