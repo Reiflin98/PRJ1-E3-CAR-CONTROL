@@ -5,8 +5,6 @@
  *  Author: thoma
  */ 
 
-#include "FrontLight.h"
-#include "RearLight.h"
-#include "Underglow.h"
-#include "MP3.h"
-#include "Motor.h"
+
+void initSystem();
+void driveControl();

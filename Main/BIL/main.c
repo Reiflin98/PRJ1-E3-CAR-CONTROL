@@ -6,29 +6,29 @@
  */ 
 
 #include <avr/io.h>
-#include "DriveControl.h"
+#include "DriveControl/DriveControl.h"
+#include "Drivers/switch.h"
 
 int counter = 0;
-void buttonIsPressed(void);
-
-// erklær *** knap til funktion
+//Initialiser interrupt counter - husk playReflex();
+ISR(Refleks registreret){
+	counter++;
+	playReflex();
+}
 
 
 int main(void)
 {
-    buttonIsPressed = false;
-	
-	initSystem()
+	initSystem();
 	
     while (1) 
     {
-		if (buttonIsPressed(void)==true)
+		if (switchOn(1) > 0)
 		{
 			driveControl(); //start driveControl / System
 			// nå system færdigt -> afvent nyt tryk 
 		}
     }
-	//Thomas er sku faktisk lidt grim v3.0
 	
 }
 
