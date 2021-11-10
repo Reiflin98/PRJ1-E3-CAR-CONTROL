@@ -22,6 +22,7 @@ void initSystem()
 	initMP3();
 	initMotor();
 	initSwitchPort();
+	
 }
 
 void driveControl()
@@ -37,7 +38,7 @@ void driveControl()
 		switch (counter)
 		{
 		case 0: //ingen brik endnu
-			accelerateForward(50); //Accelerer inden 1. brik
+			accelerateForward(50); //Accelerere inden 1. brik
 			break;
 			
 		case 1: //Brik 1
