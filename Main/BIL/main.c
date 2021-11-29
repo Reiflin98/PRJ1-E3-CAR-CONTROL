@@ -12,25 +12,26 @@
 
 
 // global counter til switch cases
-volatile unsigned counter = 0;
+volatile unsigned char counter = 0;
 
 // Left right detection
 unsigned char detection =0;
 
 
 //Initialiser interrupt counter - husk playReflex();
-ISR(INT0_vect) //refleks registreret
+ISR(INT2_vect) //refleks registreret
 {
-	if (detection!=1)
-	{
-		detection++;
-		counter++;
-		playReflex();
-	}
-	else
-	{
-		detection=0;
-	}
+	counter++;
+	//if (detection!=1)
+	//{
+		//detection++;
+		//counter++;
+		//playReflex();
+	//}
+	//else
+	//{
+		//detection=0;
+	//}
 }
 
 
@@ -38,8 +39,8 @@ ISR(INT0_vect) //refleks registreret
 int main(void)
 {
 	sei();
-	EIMSK=0b00000001;
-	EICRA=0b00000011;
+	EIMSK=0b00000100;
+	EICRA=0b00110000;
 	
 	initSystem();
 	
@@ -49,10 +50,8 @@ int main(void)
 		if (switchOn(1) > 0)
 		{
 			driveControl(); //start driveControl / System
-			// nå system færdigt -> afvent nyt tryk 
+			// når system færdigt -> afvent nyt tryk 
 		}
     }
 	
 }
-
-

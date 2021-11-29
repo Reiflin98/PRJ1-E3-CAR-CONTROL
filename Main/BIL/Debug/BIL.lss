@@ -1,0 +1,683 @@
+
+BIL.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  00800200  00000408  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000394  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000003  00800200  00800200  00000408  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000408  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000438  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000080  00000000  00000000  00000478  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001172  00000000  00000000  000004f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000d8e  00000000  00000000  0000166a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000681  00000000  00000000  000023f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000c0  00000000  00000000  00002a7c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000621  00000000  00000000  00002b3c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000003f5  00000000  00000000  0000315d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000050  00000000  00000000  00003552  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	7c c0       	rjmp	.+248    	; 0xfa <__ctors_end>
+   2:	00 00       	nop
+   4:	8c c0       	rjmp	.+280    	; 0x11e <__bad_interrupt>
+   6:	00 00       	nop
+   8:	8a c0       	rjmp	.+276    	; 0x11e <__bad_interrupt>
+   a:	00 00       	nop
+   c:	8b c0       	rjmp	.+278    	; 0x124 <__vector_3>
+   e:	00 00       	nop
+  10:	86 c0       	rjmp	.+268    	; 0x11e <__bad_interrupt>
+  12:	00 00       	nop
+  14:	84 c0       	rjmp	.+264    	; 0x11e <__bad_interrupt>
+  16:	00 00       	nop
+  18:	82 c0       	rjmp	.+260    	; 0x11e <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	80 c0       	rjmp	.+256    	; 0x11e <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	7e c0       	rjmp	.+252    	; 0x11e <__bad_interrupt>
+  22:	00 00       	nop
+  24:	7c c0       	rjmp	.+248    	; 0x11e <__bad_interrupt>
+  26:	00 00       	nop
+  28:	7a c0       	rjmp	.+244    	; 0x11e <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	78 c0       	rjmp	.+240    	; 0x11e <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	76 c0       	rjmp	.+236    	; 0x11e <__bad_interrupt>
+  32:	00 00       	nop
+  34:	74 c0       	rjmp	.+232    	; 0x11e <__bad_interrupt>
+  36:	00 00       	nop
+  38:	72 c0       	rjmp	.+228    	; 0x11e <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	70 c0       	rjmp	.+224    	; 0x11e <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	6e c0       	rjmp	.+220    	; 0x11e <__bad_interrupt>
+  42:	00 00       	nop
+  44:	6c c0       	rjmp	.+216    	; 0x11e <__bad_interrupt>
+  46:	00 00       	nop
+  48:	6a c0       	rjmp	.+212    	; 0x11e <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	68 c0       	rjmp	.+208    	; 0x11e <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	66 c0       	rjmp	.+204    	; 0x11e <__bad_interrupt>
+  52:	00 00       	nop
+  54:	64 c0       	rjmp	.+200    	; 0x11e <__bad_interrupt>
+  56:	00 00       	nop
+  58:	62 c0       	rjmp	.+196    	; 0x11e <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	60 c0       	rjmp	.+192    	; 0x11e <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	5e c0       	rjmp	.+188    	; 0x11e <__bad_interrupt>
+  62:	00 00       	nop
+  64:	5c c0       	rjmp	.+184    	; 0x11e <__bad_interrupt>
+  66:	00 00       	nop
+  68:	5a c0       	rjmp	.+180    	; 0x11e <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	58 c0       	rjmp	.+176    	; 0x11e <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	56 c0       	rjmp	.+172    	; 0x11e <__bad_interrupt>
+  72:	00 00       	nop
+  74:	54 c0       	rjmp	.+168    	; 0x11e <__bad_interrupt>
+  76:	00 00       	nop
+  78:	52 c0       	rjmp	.+164    	; 0x11e <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	50 c0       	rjmp	.+160    	; 0x11e <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	4e c0       	rjmp	.+156    	; 0x11e <__bad_interrupt>
+  82:	00 00       	nop
+  84:	4c c0       	rjmp	.+152    	; 0x11e <__bad_interrupt>
+  86:	00 00       	nop
+  88:	4a c0       	rjmp	.+148    	; 0x11e <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	48 c0       	rjmp	.+144    	; 0x11e <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	46 c0       	rjmp	.+140    	; 0x11e <__bad_interrupt>
+  92:	00 00       	nop
+  94:	44 c0       	rjmp	.+136    	; 0x11e <__bad_interrupt>
+  96:	00 00       	nop
+  98:	42 c0       	rjmp	.+132    	; 0x11e <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	40 c0       	rjmp	.+128    	; 0x11e <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	3e c0       	rjmp	.+124    	; 0x11e <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	3c c0       	rjmp	.+120    	; 0x11e <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	3a c0       	rjmp	.+116    	; 0x11e <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	38 c0       	rjmp	.+112    	; 0x11e <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	36 c0       	rjmp	.+108    	; 0x11e <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	34 c0       	rjmp	.+104    	; 0x11e <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	32 c0       	rjmp	.+100    	; 0x11e <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	30 c0       	rjmp	.+96     	; 0x11e <__bad_interrupt>
+  be:	00 00       	nop
+  c0:	2e c0       	rjmp	.+92     	; 0x11e <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	2c c0       	rjmp	.+88     	; 0x11e <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	2a c0       	rjmp	.+84     	; 0x11e <__bad_interrupt>
+  ca:	00 00       	nop
+  cc:	28 c0       	rjmp	.+80     	; 0x11e <__bad_interrupt>
+  ce:	00 00       	nop
+  d0:	26 c0       	rjmp	.+76     	; 0x11e <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	24 c0       	rjmp	.+72     	; 0x11e <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	22 c0       	rjmp	.+68     	; 0x11e <__bad_interrupt>
+  da:	00 00       	nop
+  dc:	20 c0       	rjmp	.+64     	; 0x11e <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	1e c0       	rjmp	.+60     	; 0x11e <__bad_interrupt>
+  e2:	00 00       	nop
+  e4:	c7 00       	.word	0x00c7	; ????
+  e6:	cb 00       	.word	0x00cb	; ????
+  e8:	cf 00       	.word	0x00cf	; ????
+  ea:	d3 00       	.word	0x00d3	; ????
+  ec:	d7 00       	.word	0x00d7	; ????
+  ee:	db 00       	.word	0x00db	; ????
+  f0:	df 00       	.word	0x00df	; ????
+  f2:	e3 00       	.word	0x00e3	; ????
+  f4:	e7 00       	.word	0x00e7	; ????
+  f6:	eb 00       	.word	0x00eb	; ????
+  f8:	ef 00       	.word	0x00ef	; ????
+
+000000fa <__ctors_end>:
+  fa:	11 24       	eor	r1, r1
+  fc:	1f be       	out	0x3f, r1	; 63
+  fe:	cf ef       	ldi	r28, 0xFF	; 255
+ 100:	d1 e2       	ldi	r29, 0x21	; 33
+ 102:	de bf       	out	0x3e, r29	; 62
+ 104:	cd bf       	out	0x3d, r28	; 61
+ 106:	00 e0       	ldi	r16, 0x00	; 0
+ 108:	0c bf       	out	0x3c, r16	; 60
+
+0000010a <__do_clear_bss>:
+ 10a:	22 e0       	ldi	r18, 0x02	; 2
+ 10c:	a0 e0       	ldi	r26, 0x00	; 0
+ 10e:	b2 e0       	ldi	r27, 0x02	; 2
+ 110:	01 c0       	rjmp	.+2      	; 0x114 <.do_clear_bss_start>
+
+00000112 <.do_clear_bss_loop>:
+ 112:	1d 92       	st	X+, r1
+
+00000114 <.do_clear_bss_start>:
+ 114:	a3 30       	cpi	r26, 0x03	; 3
+ 116:	b2 07       	cpc	r27, r18
+ 118:	e1 f7       	brne	.-8      	; 0x112 <.do_clear_bss_loop>
+ 11a:	25 d0       	rcall	.+74     	; 0x166 <main>
+ 11c:	39 c1       	rjmp	.+626    	; 0x390 <_exit>
+
+0000011e <__bad_interrupt>:
+ 11e:	70 cf       	rjmp	.-288    	; 0x0 <__vectors>
+
+00000120 <initSystem>:
+{
+	//initFrontLight();
+	//initRearLight();
+	//initUnderglow();
+	//initMP3();
+	initMotor();
+ 120:	6e c0       	rjmp	.+220    	; 0x1fe <initMotor>
+ 122:	08 95       	ret
+
+00000124 <__vector_3>:
+unsigned char detection =0;
+
+
+//Initialiser interrupt counter - husk playReflex();
+ISR(INT2_vect) //refleks registreret
+{
+ 124:	1f 92       	push	r1
+ 126:	0f 92       	push	r0
+ 128:	0f b6       	in	r0, 0x3f	; 63
+ 12a:	0f 92       	push	r0
+ 12c:	11 24       	eor	r1, r1
+ 12e:	8f 93       	push	r24
+ 130:	9f 93       	push	r25
+	if (detection!=1)
+ 132:	80 91 00 02 	lds	r24, 0x0200	; 0x800200 <__DATA_REGION_ORIGIN__>
+ 136:	81 30       	cpi	r24, 0x01	; 1
+ 138:	69 f0       	breq	.+26     	; 0x154 <__vector_3+0x30>
+	{
+		detection++;
+ 13a:	8f 5f       	subi	r24, 0xFF	; 255
+ 13c:	80 93 00 02 	sts	0x0200, r24	; 0x800200 <__DATA_REGION_ORIGIN__>
+		counter++;
+ 140:	80 91 01 02 	lds	r24, 0x0201	; 0x800201 <counter>
+ 144:	90 91 02 02 	lds	r25, 0x0202	; 0x800202 <counter+0x1>
+ 148:	01 96       	adiw	r24, 0x01	; 1
+ 14a:	90 93 02 02 	sts	0x0202, r25	; 0x800202 <counter+0x1>
+ 14e:	80 93 01 02 	sts	0x0201, r24	; 0x800201 <counter>
+ 152:	02 c0       	rjmp	.+4      	; 0x158 <__vector_3+0x34>
+		//playReflex();
+	}
+	else
+	{
+		detection=0;
+ 154:	10 92 00 02 	sts	0x0200, r1	; 0x800200 <__DATA_REGION_ORIGIN__>
+	}
+}
+ 158:	9f 91       	pop	r25
+ 15a:	8f 91       	pop	r24
+ 15c:	0f 90       	pop	r0
+ 15e:	0f be       	out	0x3f, r0	; 63
+ 160:	0f 90       	pop	r0
+ 162:	1f 90       	pop	r1
+ 164:	18 95       	reti
+
+00000166 <main>:
+
+
+int main(void)
+{
+	
+	EIMSK=0b00000100;
+ 166:	84 e0       	ldi	r24, 0x04	; 4
+ 168:	8d bb       	out	0x1d, r24	; 29
+	EICRA=0b00110000;
+ 16a:	80 e3       	ldi	r24, 0x30	; 48
+ 16c:	80 93 69 00 	sts	0x0069, r24	; 0x800069 <__TEXT_REGION_LENGTH__+0x7c0069>
+	
+	initSystem();
+ 170:	d7 df       	rcall	.-82     	; 0x120 <initSystem>
+	initMotor();
+ 172:	45 d0       	rcall	.+138    	; 0x1fe <initMotor>
+ 174:	78 94       	sei
+	
+	sei();
+ 176:	e0 91 01 02 	lds	r30, 0x0201	; 0x800201 <counter>
+    while (1) 
+    {
+		do{
+			switch (counter)
+ 17a:	f0 91 02 02 	lds	r31, 0x0202	; 0x800202 <counter+0x1>
+ 17e:	eb 30       	cpi	r30, 0x0B	; 11
+ 180:	f1 05       	cpc	r31, r1
+ 182:	80 f5       	brcc	.+96     	; 0x1e4 <main+0x7e>
+ 184:	88 27       	eor	r24, r24
+ 186:	ee 58       	subi	r30, 0x8E	; 142
+ 188:	ff 4f       	sbci	r31, 0xFF	; 255
+ 18a:	8f 4f       	sbci	r24, 0xFF	; 255
+ 18c:	f9 c0       	rjmp	.+498    	; 0x380 <__tablejump2__>
+ 18e:	82 e3       	ldi	r24, 0x32	; 50
+			{
+				case 0: //ingen brik endnu
+				carDrive(50); //Accelerer inden 1. brik
+ 190:	90 e0       	ldi	r25, 0x00	; 0
+ 192:	5e d0       	rcall	.+188    	; 0x250 <carDrive>
+ 194:	27 c0       	rjmp	.+78     	; 0x1e4 <main+0x7e>
+				break;
+ 196:	83 e2       	ldi	r24, 0x23	; 35
+				
+				case 1: //Brik 1
+				carDrive(35); //Nedsæt hastigheden lidt (Bakke snart)
+ 198:	90 e0       	ldi	r25, 0x00	; 0
+ 19a:	5a d0       	rcall	.+180    	; 0x250 <carDrive>
+ 19c:	23 c0       	rjmp	.+70     	; 0x1e4 <main+0x7e>
+				break;
+ 19e:	84 e1       	ldi	r24, 0x14	; 20
+				
+				case 2: //Brik 2
+				carDrive(20); //Bakke start - hastighed ydeligere ned
+ 1a0:	90 e0       	ldi	r25, 0x00	; 0
+ 1a2:	56 d0       	rcall	.+172    	; 0x250 <carDrive>
+ 1a4:	1f c0       	rjmp	.+62     	; 0x1e4 <main+0x7e>
+				break;
+ 1a6:	8a e0       	ldi	r24, 0x0A	; 10
+				
+				case 3: //Brik 3
+				carDrive(10); //Hastighed ned inden bakken kører ned
+ 1a8:	90 e0       	ldi	r25, 0x00	; 0
+ 1aa:	52 d0       	rcall	.+164    	; 0x250 <carDrive>
+ 1ac:	1b c0       	rjmp	.+54     	; 0x1e4 <main+0x7e>
+				break;
+				
+				case 4: //Brik 4
+				carDrive(50); //HAstigheden op - bunden af bakken
+ 1ae:	82 e3       	ldi	r24, 0x32	; 50
+ 1b0:	90 e0       	ldi	r25, 0x00	; 0
+ 1b2:	4e d0       	rcall	.+156    	; 0x250 <carDrive>
+				break;
+ 1b4:	17 c0       	rjmp	.+46     	; 0x1e4 <main+0x7e>
+				
+				case 5: //Brik 5
+				carDrive(40); //hastigheden lidt ned - gør klar til snart at stoppe
+ 1b6:	88 e2       	ldi	r24, 0x28	; 40
+ 1b8:	90 e0       	ldi	r25, 0x00	; 0
+ 1ba:	4a d0       	rcall	.+148    	; 0x250 <carDrive>
+				break;
+ 1bc:	13 c0       	rjmp	.+38     	; 0x1e4 <main+0x7e>
+				
+				case 6: //Brik 6
+				carDrive(30); //Kør tilbage til refleksbrik 5
+ 1be:	8e e1       	ldi	r24, 0x1E	; 30
+ 1c0:	90 e0       	ldi	r25, 0x00	; 0
+ 1c2:	46 d0       	rcall	.+140    	; 0x250 <carDrive>
+				break;
+ 1c4:	0f c0       	rjmp	.+30     	; 0x1e4 <main+0x7e>
+				
+				case 7: //Brik 6
+				carDrive(40); //Refelksbrik 6 igen
+ 1c6:	88 e2       	ldi	r24, 0x28	; 40
+ 1c8:	90 e0       	ldi	r25, 0x00	; 0
+ 1ca:	42 d0       	rcall	.+132    	; 0x250 <carDrive>
+				break;
+				
+				case 8: //Brik 5
+				carDrive(50); //Kør frem igen
+ 1cc:	0b c0       	rjmp	.+22     	; 0x1e4 <main+0x7e>
+ 1ce:	82 e3       	ldi	r24, 0x32	; 50
+ 1d0:	90 e0       	ldi	r25, 0x00	; 0
+ 1d2:	3e d0       	rcall	.+124    	; 0x250 <carDrive>
+				break;
+ 1d4:	07 c0       	rjmp	.+14     	; 0x1e4 <main+0x7e>
+				
+				case 9: //Brik 5
+				carDrive(50); //Kør frem igen
+ 1d6:	82 e3       	ldi	r24, 0x32	; 50
+ 1d8:	90 e0       	ldi	r25, 0x00	; 0
+ 1da:	3a d0       	rcall	.+116    	; 0x250 <carDrive>
+				break;
+ 1dc:	03 c0       	rjmp	.+6      	; 0x1e4 <main+0x7e>
+				
+				case 10: //Brik 6
+				carDrive(30); //Kør frem igen
+ 1de:	8e e1       	ldi	r24, 0x1E	; 30
+ 1e0:	90 e0       	ldi	r25, 0x00	; 0
+ 1e2:	36 d0       	rcall	.+108    	; 0x250 <carDrive>
+ 1e4:	80 91 01 02 	lds	r24, 0x0201	; 0x800201 <counter>
+				break;
+				
+			}
+		}while (counter < 11); //Går ud af do-while når refliksbrik 7 er nået
+ 1e8:	90 91 02 02 	lds	r25, 0x0202	; 0x800202 <counter+0x1>
+ 1ec:	0b 97       	sbiw	r24, 0x0b	; 11
+ 1ee:	0c f4       	brge	.+2      	; 0x1f2 <main+0x8c>
+ 1f0:	c2 cf       	rjmp	.-124    	; 0x176 <main+0x10>
+ 1f2:	13 d0       	rcall	.+38     	; 0x21a <carStop>
+		
+		
+		carStop();
+ 1f4:	10 92 02 02 	sts	0x0202, r1	; 0x800202 <counter+0x1>
+		//playStop();
+		
+		//turnOffUnder();
+		//turnOffFront();
+		//turnOffRear();
+		counter = 0;
+ 1f8:	10 92 01 02 	sts	0x0201, r1	; 0x800201 <counter>
+ 1fc:	bc cf       	rjmp	.-136    	; 0x176 <main+0x10>
+
+000001fe <initMotor>:
+#include <util/delay.h>
+#define delay _delay_ms(5)
+
+void initMotor(void)
+{
+	OCR1A = 0x3FF;
+ 1fe:	8f ef       	ldi	r24, 0xFF	; 255
+ 200:	93 e0       	ldi	r25, 0x03	; 3
+ 202:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 206:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+	TCCR1A = 0b11000011;
+ 20a:	83 ec       	ldi	r24, 0xC3	; 195
+ 20c:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__TEXT_REGION_LENGTH__+0x7c0080>
+	TCCR1B = 0b00000000;
+ 210:	10 92 81 00 	sts	0x0081, r1	; 0x800081 <__TEXT_REGION_LENGTH__+0x7c0081>
+	DDRB = 0b00101000;
+ 214:	88 e2       	ldi	r24, 0x28	; 40
+ 216:	84 b9       	out	0x04, r24	; 4
+ 218:	08 95       	ret
+
+0000021a <carStop>:
+}
+
+
+void carStop(void)
+{
+	while (OCR1A != 1023)
+ 21a:	0d c0       	rjmp	.+26     	; 0x236 <carStop+0x1c>
+	{
+		OCR1A++;
+ 21c:	e8 e8       	ldi	r30, 0x88	; 136
+ 21e:	f0 e0       	ldi	r31, 0x00	; 0
+ 220:	80 81       	ld	r24, Z
+ 222:	91 81       	ldd	r25, Z+1	; 0x01
+ 224:	01 96       	adiw	r24, 0x01	; 1
+ 226:	91 83       	std	Z+1, r25	; 0x01
+ 228:	80 83       	st	Z, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 22a:	8f e1       	ldi	r24, 0x1F	; 31
+ 22c:	9e e4       	ldi	r25, 0x4E	; 78
+ 22e:	01 97       	sbiw	r24, 0x01	; 1
+ 230:	f1 f7       	brne	.-4      	; 0x22e <carStop+0x14>
+ 232:	00 c0       	rjmp	.+0      	; 0x234 <carStop+0x1a>
+ 234:	00 00       	nop
+}
+
+
+void carStop(void)
+{
+	while (OCR1A != 1023)
+ 236:	80 91 88 00 	lds	r24, 0x0088	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 23a:	90 91 89 00 	lds	r25, 0x0089	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 23e:	8f 3f       	cpi	r24, 0xFF	; 255
+ 240:	93 40       	sbci	r25, 0x03	; 3
+ 242:	61 f7       	brne	.-40     	; 0x21c <carStop+0x2>
+	{
+		OCR1A++;
+		delay;
+	}
+	TCCR1B = (0b11111000 & TCCR1B);
+ 244:	e1 e8       	ldi	r30, 0x81	; 129
+ 246:	f0 e0       	ldi	r31, 0x00	; 0
+ 248:	80 81       	ld	r24, Z
+ 24a:	88 7f       	andi	r24, 0xF8	; 248
+ 24c:	80 83       	st	Z, r24
+ 24e:	08 95       	ret
+
+00000250 <carDrive>:
+void carDrive(int speed)
+{
+	
+	//int requestedSpeed = 1023-(sqrt(speed^2)*(1023/100));
+	int requestedSpeed = speed;
+	if (speed == 0) //bilen skal holde stille.
+ 250:	00 97       	sbiw	r24, 0x00	; 0
+ 252:	11 f4       	brne	.+4      	; 0x258 <carDrive+0x8>
+	{
+		carStop();
+ 254:	e2 cf       	rjmp	.-60     	; 0x21a <carStop>
+		return;
+ 256:	08 95       	ret
+	}
+	
+	if (TCCR1B == 0b00000000)
+ 258:	20 91 81 00 	lds	r18, 0x0081	; 0x800081 <__TEXT_REGION_LENGTH__+0x7c0081>
+ 25c:	21 11       	cpse	r18, r1
+ 25e:	03 c0       	rjmp	.+6      	; 0x266 <carDrive+0x16>
+	{
+		TCCR1B = 0b00000010;
+ 260:	22 e0       	ldi	r18, 0x02	; 2
+ 262:	20 93 81 00 	sts	0x0081, r18	; 0x800081 <__TEXT_REGION_LENGTH__+0x7c0081>
+	}
+	
+	if (speed < 0) //bilen skal køre baglæns.
+ 266:	99 23       	and	r25, r25
+ 268:	0c f0       	brlt	.+2      	; 0x26c <carDrive+0x1c>
+ 26a:	45 c0       	rjmp	.+138    	; 0x2f6 <carDrive+0xa6>
+	{
+		if (PINB == 0b00001000) //hvis bit 3 er sat, kører bilen fremad.
+ 26c:	23 b1       	in	r18, 0x03	; 3
+ 26e:	28 30       	cpi	r18, 0x08	; 8
+ 270:	b9 f4       	brne	.+46     	; 0x2a0 <carDrive+0x50>
+		{
+			if (OCR1A == 1023) //tjekker om bilen holder stille.
+ 272:	80 91 88 00 	lds	r24, 0x0088	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 276:	90 91 89 00 	lds	r25, 0x0089	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 27a:	8f 3f       	cpi	r24, 0xFF	; 255
+ 27c:	93 40       	sbci	r25, 0x03	; 3
+ 27e:	11 f4       	brne	.+4      	; 0x284 <carDrive+0x34>
+			{
+				PORTB = 0b00000000; //clearer bit 3, så bilen bakker. 
+ 280:	15 b8       	out	0x05, r1	; 5
+ 282:	08 95       	ret
+			}
+			else
+			{
+				OCR1A++;
+ 284:	e8 e8       	ldi	r30, 0x88	; 136
+ 286:	f0 e0       	ldi	r31, 0x00	; 0
+ 288:	80 81       	ld	r24, Z
+ 28a:	91 81       	ldd	r25, Z+1	; 0x01
+ 28c:	01 96       	adiw	r24, 0x01	; 1
+ 28e:	91 83       	std	Z+1, r25	; 0x01
+ 290:	80 83       	st	Z, r24
+ 292:	8f e1       	ldi	r24, 0x1F	; 31
+ 294:	9e e4       	ldi	r25, 0x4E	; 78
+ 296:	01 97       	sbiw	r24, 0x01	; 1
+ 298:	f1 f7       	brne	.-4      	; 0x296 <carDrive+0x46>
+ 29a:	00 c0       	rjmp	.+0      	; 0x29c <carDrive+0x4c>
+ 29c:	00 00       	nop
+ 29e:	08 95       	ret
+			}
+		}
+		
+		else //bilen kører allerede baglæns.
+		{
+			if (OCR1A < requestedSpeed) //hvis bilen kører for hurtigt.
+ 2a0:	20 91 88 00 	lds	r18, 0x0088	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 2a4:	30 91 89 00 	lds	r19, 0x0089	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 2a8:	28 17       	cp	r18, r24
+ 2aa:	39 07       	cpc	r19, r25
+ 2ac:	70 f4       	brcc	.+28     	; 0x2ca <carDrive+0x7a>
+			{
+				OCR1A++;
+ 2ae:	e8 e8       	ldi	r30, 0x88	; 136
+ 2b0:	f0 e0       	ldi	r31, 0x00	; 0
+ 2b2:	80 81       	ld	r24, Z
+ 2b4:	91 81       	ldd	r25, Z+1	; 0x01
+ 2b6:	01 96       	adiw	r24, 0x01	; 1
+ 2b8:	91 83       	std	Z+1, r25	; 0x01
+ 2ba:	80 83       	st	Z, r24
+ 2bc:	8f e1       	ldi	r24, 0x1F	; 31
+ 2be:	9e e4       	ldi	r25, 0x4E	; 78
+ 2c0:	01 97       	sbiw	r24, 0x01	; 1
+ 2c2:	f1 f7       	brne	.-4      	; 0x2c0 <carDrive+0x70>
+ 2c4:	00 c0       	rjmp	.+0      	; 0x2c6 <carDrive+0x76>
+ 2c6:	00 00       	nop
+ 2c8:	08 95       	ret
+				delay;
+			}
+			else if (OCR1A > requestedSpeed) //hvis bilen kører for langsomt.
+ 2ca:	20 91 88 00 	lds	r18, 0x0088	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 2ce:	30 91 89 00 	lds	r19, 0x0089	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 2d2:	82 17       	cp	r24, r18
+ 2d4:	93 07       	cpc	r25, r19
+ 2d6:	08 f0       	brcs	.+2      	; 0x2da <carDrive+0x8a>
+ 2d8:	52 c0       	rjmp	.+164    	; 0x37e <carDrive+0x12e>
+			{
+				OCR1A--;
+ 2da:	e8 e8       	ldi	r30, 0x88	; 136
+ 2dc:	f0 e0       	ldi	r31, 0x00	; 0
+ 2de:	80 81       	ld	r24, Z
+ 2e0:	91 81       	ldd	r25, Z+1	; 0x01
+ 2e2:	01 97       	sbiw	r24, 0x01	; 1
+ 2e4:	91 83       	std	Z+1, r25	; 0x01
+ 2e6:	80 83       	st	Z, r24
+ 2e8:	8f e1       	ldi	r24, 0x1F	; 31
+ 2ea:	9e e4       	ldi	r25, 0x4E	; 78
+ 2ec:	01 97       	sbiw	r24, 0x01	; 1
+ 2ee:	f1 f7       	brne	.-4      	; 0x2ec <carDrive+0x9c>
+ 2f0:	00 c0       	rjmp	.+0      	; 0x2f2 <carDrive+0xa2>
+ 2f2:	00 00       	nop
+ 2f4:	08 95       	ret
+		}
+	}
+	
+	else //bilen skal køre forlæns.
+	{
+		if (PINB == 0b00001000) //hvis bit 3 er sat, kører bilen fremad.
+ 2f6:	23 b1       	in	r18, 0x03	; 3
+ 2f8:	28 30       	cpi	r18, 0x08	; 8
+ 2fa:	51 f5       	brne	.+84     	; 0x350 <carDrive+0x100>
+		{
+			if (OCR1A < requestedSpeed) //hvis bilen kører for hurtigt.
+ 2fc:	20 91 88 00 	lds	r18, 0x0088	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 300:	30 91 89 00 	lds	r19, 0x0089	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 304:	28 17       	cp	r18, r24
+ 306:	39 07       	cpc	r19, r25
+ 308:	70 f4       	brcc	.+28     	; 0x326 <carDrive+0xd6>
+			{
+				OCR1A++;
+ 30a:	e8 e8       	ldi	r30, 0x88	; 136
+ 30c:	f0 e0       	ldi	r31, 0x00	; 0
+ 30e:	80 81       	ld	r24, Z
+ 310:	91 81       	ldd	r25, Z+1	; 0x01
+ 312:	01 96       	adiw	r24, 0x01	; 1
+ 314:	91 83       	std	Z+1, r25	; 0x01
+ 316:	80 83       	st	Z, r24
+ 318:	8f e1       	ldi	r24, 0x1F	; 31
+ 31a:	9e e4       	ldi	r25, 0x4E	; 78
+ 31c:	01 97       	sbiw	r24, 0x01	; 1
+ 31e:	f1 f7       	brne	.-4      	; 0x31c <carDrive+0xcc>
+ 320:	00 c0       	rjmp	.+0      	; 0x322 <carDrive+0xd2>
+ 322:	00 00       	nop
+ 324:	08 95       	ret
+				delay;
+			}
+			else if (OCR1A > requestedSpeed) //hvis bilen kører for langsomt.
+ 326:	20 91 88 00 	lds	r18, 0x0088	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 32a:	30 91 89 00 	lds	r19, 0x0089	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 32e:	82 17       	cp	r24, r18
+ 330:	93 07       	cpc	r25, r19
+ 332:	28 f5       	brcc	.+74     	; 0x37e <carDrive+0x12e>
+			{
+				OCR1A--;
+ 334:	e8 e8       	ldi	r30, 0x88	; 136
+ 336:	f0 e0       	ldi	r31, 0x00	; 0
+ 338:	80 81       	ld	r24, Z
+ 33a:	91 81       	ldd	r25, Z+1	; 0x01
+ 33c:	01 97       	sbiw	r24, 0x01	; 1
+ 33e:	91 83       	std	Z+1, r25	; 0x01
+ 340:	80 83       	st	Z, r24
+ 342:	8f e1       	ldi	r24, 0x1F	; 31
+ 344:	9e e4       	ldi	r25, 0x4E	; 78
+ 346:	01 97       	sbiw	r24, 0x01	; 1
+ 348:	f1 f7       	brne	.-4      	; 0x346 <carDrive+0xf6>
+ 34a:	00 c0       	rjmp	.+0      	; 0x34c <carDrive+0xfc>
+ 34c:	00 00       	nop
+ 34e:	08 95       	ret
+				return;
+			}	
+		}
+		else //bilen køererer baglæns.
+		{
+			if (OCR1A == 1023) //tjekker om bilen holder stille.
+ 350:	80 91 88 00 	lds	r24, 0x0088	; 0x800088 <__TEXT_REGION_LENGTH__+0x7c0088>
+ 354:	90 91 89 00 	lds	r25, 0x0089	; 0x800089 <__TEXT_REGION_LENGTH__+0x7c0089>
+ 358:	8f 3f       	cpi	r24, 0xFF	; 255
+ 35a:	93 40       	sbci	r25, 0x03	; 3
+ 35c:	19 f4       	brne	.+6      	; 0x364 <carDrive+0x114>
+			{
+				PORTB = 0b00001000; //setter bit 3, så bilen køererererer forlæns.
+ 35e:	88 e0       	ldi	r24, 0x08	; 8
+ 360:	85 b9       	out	0x05, r24	; 5
+ 362:	08 95       	ret
+			}
+			else
+			{
+				OCR1A++;
+ 364:	e8 e8       	ldi	r30, 0x88	; 136
+ 366:	f0 e0       	ldi	r31, 0x00	; 0
+ 368:	80 81       	ld	r24, Z
+ 36a:	91 81       	ldd	r25, Z+1	; 0x01
+ 36c:	01 96       	adiw	r24, 0x01	; 1
+ 36e:	91 83       	std	Z+1, r25	; 0x01
+ 370:	80 83       	st	Z, r24
+ 372:	8f e1       	ldi	r24, 0x1F	; 31
+ 374:	9e e4       	ldi	r25, 0x4E	; 78
+ 376:	01 97       	sbiw	r24, 0x01	; 1
+ 378:	f1 f7       	brne	.-4      	; 0x376 <carDrive+0x126>
+ 37a:	00 c0       	rjmp	.+0      	; 0x37c <carDrive+0x12c>
+ 37c:	00 00       	nop
+ 37e:	08 95       	ret
+
+00000380 <__tablejump2__>:
+ 380:	ee 0f       	add	r30, r30
+ 382:	ff 1f       	adc	r31, r31
+ 384:	88 1f       	adc	r24, r24
+ 386:	8b bf       	out	0x3b, r24	; 59
+ 388:	07 90       	elpm	r0, Z+
+ 38a:	f6 91       	elpm	r31, Z
+ 38c:	e0 2d       	mov	r30, r0
+ 38e:	19 94       	eijmp
+
+00000390 <_exit>:
+ 390:	f8 94       	cli
+
+00000392 <__stop_program>:
+ 392:	ff cf       	rjmp	.-2      	; 0x392 <__stop_program>

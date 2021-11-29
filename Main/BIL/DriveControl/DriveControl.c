@@ -5,6 +5,7 @@
  *  Author: thoma
  */ 
 #include <avr/io.h>
+#define F_CPU 16000000
 #include <util/delay.h>
 #include "DriveControl.h"
 #include "../FrontLight/FrontLight.h"
@@ -14,30 +15,34 @@
 #include "../Underglow/Underglow.h"
 #include "../Drivers/switch.h"
 
+
+extern counter;
+
 void initSystem()
 {
-	initFrontLight();
-	initRearLight();
-	initUnderglow();
-	initMP3();
+// 	initFrontLight();
+// 	initRearLight();
+// 	initUnderglow();
+// 	initMP3();
 	initMotor();
 	initSwitchPort();
+	
 }
 
 void driveControl()
 {
-	turnOnUnder();
-	_delay_ms(5000);
-	playStart();
-	_delay_ms(5000);
-	turnOnFront();
-	turnOnRear();
-	
+	//turnOnUnder();
+	//_delay_ms(5000);
+	//playStart();
+	//_delay_ms(5000);
+	//turnOnFront();
+	//turnOnRear();
+	//
 	do{
 		switch (counter)
 		{
 		case 0: //ingen brik endnu
-			carDrive(50); //Accelerer inden 1. brik
+			carDrive(50); //Accelerere inden 1. brik
 			break;
 			
 		case 1: //Brik 1
@@ -61,11 +66,11 @@ void driveControl()
 			break;
 			
 		case 6: //Brik 6
-			carDrive(30); //Kør tilbage til refleksbrik 5
+			carDrive(-30); //Kør tilbage til refleksbrik 5
 			break;
 			
 		case 7: //Brik 6
-			carDrive(40); //Refelksbrik 6 igen
+			carDrive(-40); //Refelksbrik 6 igen
 			break;
 			
 		case 8: //Brik 5
@@ -81,15 +86,14 @@ void driveControl()
 			break;
 			
 		}
-	}while ((counter < 11) || switchOn(1)<0); //Går ud af do-while når refliksbrik 7 er nået
+	}while (counter < 11); //Går ud af do-while når refliksbrik 7 er nået
 	
 	
 	carStop(); 
-	playStop();
-	
-	turnOffUnder();
-	turnOffFront();
-	turnOffRear();
+	//playStop();
+	//
+	//turnOffUnder();
+	//turnOffFront();
+	//turnOffRear();
 	counter = 0;
 }
-
