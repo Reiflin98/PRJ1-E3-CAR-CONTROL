@@ -6,3 +6,5 @@
  */ 
 
 void initMotor();
+void carDrive(int speed);
+void carStop(void);
