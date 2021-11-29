@@ -1,4 +1,4 @@
-MotorDriver/Motor.d MotorDriver/Motor.o: ../MotorDriver/Motor.c \
+Underglow/Underglow.d Underglow/Underglow.o: ../Underglow/Underglow.c \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -10,9 +10,7 @@ MotorDriver/Motor.d MotorDriver/Motor.o: ../MotorDriver/Motor.c \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
- d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
+ ../Underglow/Underglow.h
 
 d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -36,8 +34,4 @@ d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\includ
 
 d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
-d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
-
-d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
-
-d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
+../Underglow/Underglow.h:

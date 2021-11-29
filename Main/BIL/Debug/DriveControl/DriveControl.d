@@ -1,4 +1,5 @@
-MotorDriver/Motor.d MotorDriver/Motor.o: ../MotorDriver/Motor.c \
+DriveControl/DriveControl.d DriveControl/DriveControl.o: \
+ ../DriveControl/DriveControl.c \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -12,7 +13,13 @@ MotorDriver/Motor.d MotorDriver/Motor.o: ../MotorDriver/Motor.c \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
+ d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ ../DriveControl/DriveControl.h \
+ ../DriveControl/../FrontLight/FrontLight.h \
+ ../DriveControl/../MotorDriver/Motor.h ../DriveControl/../MP3/MP3.h \
+ ../DriveControl/../RearLight/RearLight.h \
+ ../DriveControl/../Underglow/Underglow.h \
+ ../DriveControl/../Drivers/switch.h
 
 d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -41,3 +48,17 @@ d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\includ
 d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
 
 d:\programmer\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
+
+../DriveControl/DriveControl.h:
+
+../DriveControl/../FrontLight/FrontLight.h:
+
+../DriveControl/../MotorDriver/Motor.h:
+
+../DriveControl/../MP3/MP3.h:
+
+../DriveControl/../RearLight/RearLight.h:
+
+../DriveControl/../Underglow/Underglow.h:
+
+../DriveControl/../Drivers/switch.h:
