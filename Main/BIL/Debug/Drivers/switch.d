@@ -1,4 +1,4 @@
-MotorDriver/Motor.d MotorDriver/Motor.o: ../MotorDriver/Motor.c \
+Drivers/switch.d Drivers/switch.o: ../Drivers/switch.c \
  d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -9,10 +9,7 @@ MotorDriver/Motor.d MotorDriver/Motor.o: ../MotorDriver/Motor.c \
  d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h \
  d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
- d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
- d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
+ d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h
 
 d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -35,9 +32,3 @@ d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\versio
 d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h:
 
 d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
-
-d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
-
-d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
-
-d:\programmer\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
