@@ -6,5 +6,6 @@
  */ 
 
 void initMotor();
-void carDrive(int speed);
+void carDrive(int speed, char acceleration);
+void delay_ms(unsigned char milliseconds);
 void carStop();
