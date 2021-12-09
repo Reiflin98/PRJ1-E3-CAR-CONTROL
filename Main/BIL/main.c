@@ -39,7 +39,7 @@ ISR(INT2_vect) //refleks registreret
 	//}
 }
 
-ISR(TIMER4_OVF_vect) //0,5s delay til bremselys
+ISR(TIMER4_OVF_vect)
 {
 	turnOnRearLightDrive();
 	TCCR4B = 0b00000000;

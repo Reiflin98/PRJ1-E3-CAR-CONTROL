@@ -1,45 +1,44 @@
-#include "Rearlight.h"
+#include "rearlight.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
 void initRearLight (void)
 {
-	TCCR3A = 0b10000011;
-	TCCR3B = 0b00000000;
+	DDRE = 0xFF; //Sætter E til udgang da det er en E der sender PWM ud.
+	TCCR3A = 0b10000011; //Del A til timer 3
+	TCCR3B = 0b00000000; //Del B til timer 3
 	
 	TCCR4A = 0b00000000;
 	TCCR4B = 0b00000000;
+	TIMSK4 = 0b00000001;
 }
 
 void turnOnRearLightBreak (void)
 {
-	if (OCR3A!=1023)
-	{
-		TCCR3B = 0b00000001;
-		OCR3A=1023;
-		TCCR4B = 0b00000101;
-	}
+	TCCR3B |= 0b00000001; //Bruges kun indtil implementering på bil da ellers unødvendig
+	OCR3A=1023; //100% af 5V hvilket giver 50mA pr. ledsæt
 	
-	TCNT4 = 57724;
+	TCCR4B |= 0b00000101;
+	TCNT4 = 65500;
 }
 
 void turnOnRearLightDrive (void)
 {
-	TCCR3B = 0b00000001;
-	OCR3A = 204;
+	TCCR3B |= 0b00000001; // Sætter prescaleren for at tænde for PWM
+	OCR3A = 205; // 20% af max (5V) hvilket giver 10mA pr. ledsæt
 }
 
 void turnOffRear (void)
 {
-	TCCR3B = 0b00000000;
+	TCCR3B = 0b00000000; // Slukker PWM til baglys
 }
 
 void turnOnReverse (void)
 {
-	PORTA = PORTA | 0b00000010;
+	PORTC = PORTC | 0b00000010; // Sender 5V ud til C1
 }
 
 void turnOffReverse (void)
 {
-	PORTA = PORTA & 0b11111101;
+	PORTC = PORTC & 0b11111101; // Sender 0V ud til C1
 }

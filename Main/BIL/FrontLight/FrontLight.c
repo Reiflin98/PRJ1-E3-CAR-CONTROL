@@ -3,14 +3,13 @@
 
 void initFrontLight (void)
 {
-	PORTA = 0;
-	DDRA = 0xFF; // Gør alle A pins til udgange
+	DDRC = 0xFF; // Gør alle C pins til udgange
 }
 void turnOnFront (void)
 {
-	PORTA = PORTA | 0b00000001;
+	PORTC = PORTC | 0b00000001; // Sender 5V ud til C0
 }
 void turnOffFront (void)
 {
-	PORTA = PORTA & 0b11111110;
+	PORTC = PORTC & 0b11111110; // Sender 0V ud til C0
 }
