@@ -20,8 +20,8 @@ extern counter;
 
 void initSystem()
 {
-// 	initFrontLight();
-// 	initRearLight();
+ 	initFrontLight();
+ 	initRearLight();
 // 	initUnderglow();
 // 	initMP3();
 	initMotor();
