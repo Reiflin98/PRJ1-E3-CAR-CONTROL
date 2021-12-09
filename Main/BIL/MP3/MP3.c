@@ -6,6 +6,7 @@
  */ 
 #include <avr/io.h>
 #include "MP3.h"
+#define XTAL 16000000
 
 void InitUART(unsigned long BaudRate, unsigned char DataBit, unsigned char Rx_Int)
 {

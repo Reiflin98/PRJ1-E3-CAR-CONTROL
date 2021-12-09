@@ -31,6 +31,9 @@ void initSystem()
 
 void driveControl()
 {
+	
+	PORTB |= 0b00000001;
+	PORTB &= 0b11111110;
 	int ned_af_bakke = 0;
 	//turnOnUnder();
 	//_delay_ms(5000);
@@ -47,15 +50,15 @@ void driveControl()
 			break;
 		
 		case 1: //Brik 1
-			carDrive(50, 5); //Nedsæt hastigheden lidt (Bakke snart)
+			carDrive(50, 4); //Nedsæt hastigheden lidt (Bakke snart)
 			break;
 			
 		case 2: //Brik 2
-			carDrive(80, 1); //Bakke start - hastighed ydeligere ned
+			carDrive(80, 2); //Bakke start - hastighed ydeligere ned
 			break;
 			
 		case 3: //Brik 3
-			if (ned_af_bakke < 5000)
+			if (ned_af_bakke < 500)
 			{
 				carDrive(-17, 1); //Hastighed ned inden bakken kører ned
 				ned_af_bakke++;
@@ -68,19 +71,19 @@ void driveControl()
 		
 			
 		case 4: //Brik 4
-			carDrive(70, 5); //HAstigheden op - bunden af bakken
+			carDrive(70, 2); //HAstigheden op - bunden af bakken
 			break;
 			
 		case 5: //Brik 5
-			carDrive(50, 10); //hastigheden lidt ned - gør klar til snart at stoppe
+			carDrive(50, 8); //hastigheden lidt ned - gør klar til snart at stoppe
 			break;
 			
 		case 6: //Brik 6
-			carDrive(-30, 1); //Kør tilbage til refleksbrik 5
+			carDrive(-40, 1); //Kør tilbage til refleksbrik 5
 			break;
 			
 		case 7: //Brik 6
-			carDrive(-50, 3); //Refelksbrik 6 igen
+			carDrive(-50, 2); //Refelksbrik 6 igen
 			break;
 			
 		case 8: //Brik 5
@@ -88,7 +91,7 @@ void driveControl()
 			break;
 			
 		case 9: //Brik 5
-			carDrive(70, 4); //Kør frem igen
+			carDrive(70, 2); //Kør frem igen
 			break;
 			
 		case 10: //Brik 6
