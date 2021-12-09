@@ -25,16 +25,17 @@ unsigned char detection = 0;
 ISR(INT2_vect) //refleks registreret
 {
 	counter++;
-	//if (detection != 0)
-	//{
-//
-	//}else
+	//if (detection == 0)
 	//{
 		//counter++;
 		////playReflex();
 		//detection = 1;
-		//TCNT1 = 34286;
+		//TCNT1 = 62411;
 		//TCCR1B |= 0b00000101;
+
+	//}else
+	//{
+		
 	//}
 }
 
@@ -56,6 +57,12 @@ int main(void)
 	sei();
 	EIMSK=0b00000100;
 	EICRA=0b00110000;
+	
+	//timer
+	//TCCR1A = 0b00000000;
+	//TCCR1B = 0b00000000;
+	//TIMSK1 = 0b00000001;
+	
 	
 	//Timer til reflex
 	//TCCR1A = 0b00000000;

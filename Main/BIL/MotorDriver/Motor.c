@@ -6,6 +6,7 @@
  */ 
 
 #include "Motor.h"
+#include "../RearLight/RearLight.h"
 #include <avr/io.h>
 #define F_CPU 16000000
 #include <util/delay.h>
@@ -16,7 +17,8 @@ void initMotor(void)
 	TCCR1A = 0b11000011;
 	TCCR1B = 0b00000000;
 	DDRB = 0b11111111;
-	PORTB = 0b00001000;
+	PORTB = 0b00001001;
+	PORTB &= 0b11111110;
 	
 }
 
@@ -49,6 +51,7 @@ void carDrive(int speed, char acceleration)
 			else
 			{
 				OCR1A++;
+				turnOnRearLightBreak();
 				delay_ms(acceleration);
 			}
 		}
@@ -58,6 +61,7 @@ void carDrive(int speed, char acceleration)
 			if (OCR1A < requestedSpeed) //hvis bilen kører for hurtigt.
 			{
 				OCR1A++;
+				turnOnRearLightBreak();
 				delay_ms(acceleration);
 			}
 			else if (OCR1A > requestedSpeed) //hvis bilen kører for langsomt.
@@ -79,6 +83,7 @@ void carDrive(int speed, char acceleration)
 			if (OCR1A < requestedSpeed) //hvis bilen kører for hurtigt.
 			{
 				OCR1A++;
+				turnOnRearLightBreak();
 				delay_ms(acceleration);
 			}
 			else if (OCR1A > requestedSpeed) //hvis bilen kører for langsomt.
@@ -100,6 +105,7 @@ void carDrive(int speed, char acceleration)
 			else
 			{
 				OCR1A++;
+				turnOnRearLightBreak();
 				delay_ms(acceleration);
 			}
 		}
@@ -113,7 +119,8 @@ void carStop()
 	while (OCR1A != 0x3FF)
 	{
 		OCR1A++;
-		_delay_ms(2);
+		turnOnRearLightBreak();
+		_delay_ms(1);
 	}
 	TCCR1B = (0b11111000 & TCCR1B);
 	return;
