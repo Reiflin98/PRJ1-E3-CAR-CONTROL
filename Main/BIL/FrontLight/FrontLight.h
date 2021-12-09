@@ -1,8 +1,4 @@
-/*
- * FrontLight.h
- *
- * Created: 28-10-2021 13:37:01
- *  Author: thoma
- */ 
 
-void initFrontLight();
+void initFrontLight (void);
+void turnOnFront (void);
+void turnOffFront (void);

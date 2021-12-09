@@ -8,7 +8,10 @@
 #include <avr/io.h>
 #include "DriveControl/DriveControl.h"
 #include "Drivers/switch.h"
+#include "FrontLight/FrontLight.h"
+#include "RearLight/RearLight.h"
 #include <avr/interrupt.h>
+
 
 
 // global counter til switch cases
@@ -34,6 +37,12 @@ ISR(INT2_vect) //refleks registreret
 	//{
 		
 	//}
+}
+
+ISR(TIMER4_OVF_vect) //0,5s delay til bremselys
+{
+	turnOnRearLightDrive();
+	TCCR4B = 0b00000000;
 }
 
 //ISR(TIMER1_OVF_vect){

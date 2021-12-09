@@ -1,8 +1,6 @@
-/*
- * RearLight.h
- *
- * Created: 28-10-2021 13:41:59
- *  Author: thoma
- */ 
-
-void initRearLight();
+void initRearLight (void);
+void turnOnRearLightBreak (void);
+void turnOnRearLightDrive (void);
+void turnOffRear (void);
+void turnOnReverse (void);
+void turnOffReverse (void);
