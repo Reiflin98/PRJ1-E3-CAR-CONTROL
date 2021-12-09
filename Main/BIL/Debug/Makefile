@@ -37,7 +37,7 @@ SUBDIRS :=  \
 ../FrontLight \
 ../MotorDriver \
 ../MP3 \
-../System \
+../Drivers \
 ../Underglow \
 ../RearLight
 
@@ -45,6 +45,7 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../DriveControl/DriveControl.c \
+../Drivers/switch.c \
 ../FrontLight/FrontLight.c \
 ../main.c \
 ../MotorDriver/Motor.c \
@@ -61,6 +62,7 @@ ASM_SRCS +=
 
 OBJS +=  \
 DriveControl/DriveControl.o \
+Drivers/switch.o \
 FrontLight/FrontLight.o \
 main.o \
 MotorDriver/Motor.o \
@@ -70,6 +72,7 @@ Underglow/Underglow.o
 
 OBJS_AS_ARGS +=  \
 DriveControl/DriveControl.o \
+Drivers/switch.o \
 FrontLight/FrontLight.o \
 main.o \
 MotorDriver/Motor.o \
@@ -79,6 +82,7 @@ Underglow/Underglow.o
 
 C_DEPS +=  \
 DriveControl/DriveControl.d \
+Drivers/switch.d \
 FrontLight/FrontLight.d \
 main.d \
 MotorDriver/Motor.d \
@@ -88,6 +92,7 @@ Underglow/Underglow.d
 
 C_DEPS_AS_ARGS +=  \
 DriveControl/DriveControl.d \
+Drivers/switch.d \
 FrontLight/FrontLight.d \
 main.d \
 MotorDriver/Motor.d \
@@ -110,6 +115,13 @@ LINKER_SCRIPT_DEP+=
 
 # AVR32/GNU C Compiler
 DriveControl/DriveControl.o: ../DriveControl/DriveControl.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Drivers/switch.o: ../Drivers/switch.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -4,6 +4,8 @@
 
 DriveControl\DriveControl.c
 
+Drivers\switch.c
+
 FrontLight\FrontLight.c
 
 main.c

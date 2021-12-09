@@ -5,4 +5,5 @@
  *  Author: thoma
  */ 
 
-void initMP3();
+void InitUART(unsigned long BaudRate, unsigned char DataBit, unsigned char Rx_Int);
+void SendChar(char Tegn);
