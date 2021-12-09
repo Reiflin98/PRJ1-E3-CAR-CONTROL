@@ -1,5 +1,5 @@
 MotorDriver/Motor.d MotorDriver/Motor.o: ../MotorDriver/Motor.c \
- ../MotorDriver/Motor.h \
+ ../MotorDriver/Motor.h ../MotorDriver/../RearLight/RearLight.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -16,6 +16,8 @@ MotorDriver/Motor.d MotorDriver/Motor.o: ../MotorDriver/Motor.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
 
 ../MotorDriver/Motor.h:
+
+../MotorDriver/../RearLight/RearLight.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
