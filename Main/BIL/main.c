@@ -8,6 +8,7 @@
 #include <avr/io.h>
 #include "DriveControl/DriveControl.h"
 #include "Drivers/switch.h"
+#include "MP3/MP3.h"
 #include <avr/interrupt.h>
 
 
@@ -22,6 +23,7 @@ unsigned char detection = 0;
 ISR(INT2_vect) //refleks registreret
 {
 	counter++;
+	gunSound();
 	//if (detection == 0)
 	//{
 		//counter++;
@@ -67,7 +69,6 @@ int main(void)
 	
 	initSystem();
 	counter = 0;
-	
     while (1) 
     {
 		if (switchOn(1) != 0 || (PINB & 0b00000001) != 0)

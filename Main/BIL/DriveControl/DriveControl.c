@@ -23,7 +23,7 @@ void initSystem()
  	initFrontLight();
  	initRearLight();
 // 	initUnderglow();
-// 	initMP3();
+ 	InitUART(9600, 8);
 	initMotor();
 	initSwitchPort();
 	
@@ -37,11 +37,11 @@ void driveControl()
 	int ned_af_bakke = 0;
 	//turnOnUnder();
 	//_delay_ms(5000);
-	//playStart();
+	startSound();
 	//_delay_ms(5000);
 	turnOnFront();
-	turnOnRearLightDrive();
 	initRearLight();
+	turnOnRearLightDrive();
 	//
 	do{
 		switch (counter)
@@ -106,11 +106,10 @@ void driveControl()
 	}while (counter < 11); //Går ud af do-while når refliksbrik 7 er nået
 	
 	carStop();
-	
 	//playStop();
 	//
 	//turnOffUnder();
-	turnOnFront();
+	turnOffFront();
 	turnOffRear();
 	counter = 0;
 }

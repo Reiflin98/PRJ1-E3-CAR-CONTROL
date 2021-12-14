@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <stdlib.h>
-#include "uart_int.h"
+//#include "uart_int.h"
 #define F_CPU 16000000
 #include <util/delay.h>
 
@@ -77,8 +77,6 @@ void startSound()
 	SendChar(0xFF);
 	SendChar(0xFC);
 	SendChar(0xEF);
-	
-	_delay_ms(5000);
 }
 
 void gunSound()
@@ -92,8 +90,6 @@ void gunSound()
 	SendChar(0xFF);
 	SendChar(0xFB);
 	SendChar(0xEF);
-	
-	_delay_ms(3000);
 }
 
 void endSound()
@@ -107,6 +103,4 @@ void endSound()
 	SendChar(0xFF);
 	SendChar(0xFA);
 	SendChar(0xEF);
-	
-	_delay_ms(5000);
 }

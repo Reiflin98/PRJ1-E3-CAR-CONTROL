@@ -30,7 +30,7 @@ void turnOnRearLightDrive (void)
 
 void turnOffRear (void)
 {
-	TCCR3B = 0b00000000; // Slukker PWM til baglys
+	TCCR3B &= 0b11111110; // Slukker PWM til baglys
 }
 
 void turnOnReverse (void)
