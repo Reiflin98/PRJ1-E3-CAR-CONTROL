@@ -35,6 +35,10 @@ void initSystem()
 void driveControl()
 {
 	sei();
+	if ((EIFR && 0b00000100) != 0)
+	{
+		EIFR |= 0b00000100;
+	}
 	PORTB |= 0b00000100;
 	PORTB &= 0b11111011;
 	int ned_af_bakke = 0;
