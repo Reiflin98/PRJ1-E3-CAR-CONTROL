@@ -34,11 +34,11 @@ void initSystem()
 
 void driveControl()
 {
-	sei();
 	if ((EIFR && 0b00000100) != 0)
 	{
 		EIFR |= 0b00000100;
 	}
+	sei();
 	PORTB |= 0b00000100;
 	PORTB &= 0b11111011;
 	int ned_af_bakke = 0;
@@ -46,6 +46,7 @@ void driveControl()
 	turnOnUnder();
 	turnOnFront();
 	turnOnRearLightDrive();
+	_delay_ms(100);
 	playStart();
 	_delay_ms(4000);
 	//
@@ -117,19 +118,25 @@ void driveControl()
 	turnOffRear();
 	_delay_ms(1000);
 	playStop();
+	
 	_delay_ms(100);
+	turnOnReverse();
 	turnOnFront();
 	turnOnRearLightDrive();
 	_delay_ms(100);
+	turnOffReverse();
 	turnOffFront();
 	turnOffRear();
 	_delay_ms(100);
+	turnOnReverse();
 	turnOnFront();
 	turnOnRearLightDrive();
 	_delay_ms(100);
+	turnOffReverse();
 	turnOffFront();
 	turnOffRear();
-	//turnOffUnder();
+	
+	turnOffUnder();
 	counter = 0;
 	cli();
 }

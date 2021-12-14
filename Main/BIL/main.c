@@ -69,7 +69,7 @@ int main(void)
 	counter = 0;
     while (1) 
     {
-		if (switchOn(1) != 0 || (PINB & 0b00000001) != 0)
+		if (switchOn(1) != 0 || (PINB & 0b00000010) != 0)
 		{
 			driveControl(); //start driveControl / System
 			// når system færdigt -> afvent nyt tryk 
