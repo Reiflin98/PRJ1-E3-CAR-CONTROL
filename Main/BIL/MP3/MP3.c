@@ -26,18 +26,18 @@ void InitUART(unsigned long BaudRate, unsigned char DataBit)
   if ((BaudRate >= 300) && (BaudRate <= 115200) && (DataBit >=5) && (DataBit <= 8))
   { 
     // "Normal" clock, no multiprocessor mode (= default)
-    UCSR1A = 0b00100000;
+    UCSR2A = 0b00100000;
     // No interrupts enabled
     // Receiver enabled
     // Transmitter enabled
     // No 9 bit operation
-    UCSR1B = 0b00011000;	
+    UCSR2B = 0b00011000;	
     // Asynchronous operation, 1 stop bit
     // Bit 2 and bit 1 controls the number of data bits
-    UCSR1C = (DataBit-5)<<1;
+    UCSR2C = (DataBit-5)<<1;
     // Set Baud Rate according to the parameter BaudRate:
     // Adding (8*Baudrate) ensures correct rounding (up/down)
-    UBRR1 = (XTAL+(8*BaudRate))/(16*BaudRate) - 1;
+    UBRR2 = (XTAL+(8*BaudRate))/(16*BaudRate) - 1;
 	}  
 		// set volume to 30
 		SendChar(0x7E);
@@ -60,10 +60,10 @@ Parameter :
 void SendChar(char Tegn)
 {
   // Wait for transmitter register empty (ready for new character)
-  while ( (UCSR1A & (1<<5)) == 0 )
+  while ( (UCSR2A & (1<<5)) == 0 )
   {}
   // Then send the character
-  UDR1 = Tegn;
+  UDR2 = Tegn;
 }
 
 void playStart()
@@ -77,8 +77,6 @@ void playStart()
 	SendChar(0xFF);
 	SendChar(0xFC);
 	SendChar(0xEF);
-	
-	_delay_ms(5000);
 }
 
 void playReflex()
@@ -92,8 +90,6 @@ void playReflex()
 	SendChar(0xFF);
 	SendChar(0xFB);
 	SendChar(0xEF);
-	
-	_delay_ms(3000);
 }
 
 void playStop()
@@ -107,6 +103,4 @@ void playStop()
 	SendChar(0xFF);
 	SendChar(0xFA);
 	SendChar(0xEF);
-	
-	_delay_ms(5000);
 }
