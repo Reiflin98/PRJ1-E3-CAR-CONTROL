@@ -7,6 +7,6 @@
 
 void InitUART(unsigned long BaudRate, unsigned char DataBit);
 void SendChar(char Tegn);
-void startSound(void);
-void gunSound(void);
-void endSound(void);
+void playStart(void);
+void playReflex(void);
+void playStop(void);

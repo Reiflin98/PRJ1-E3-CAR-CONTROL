@@ -7,6 +7,7 @@
 
 #include <avr/io.h>
 #include "DriveControl/DriveControl.h"
+#include "RearLight/RearLight.h"
 #include "Drivers/switch.h"
 #include "MP3/MP3.h"
 #include <avr/interrupt.h>
@@ -23,7 +24,7 @@ unsigned char detection = 0;
 ISR(INT2_vect) //refleks registreret
 {
 	counter++;
-	gunSound();
+	playReflex();
 	//if (detection == 0)
 	//{
 		//counter++;
@@ -53,10 +54,10 @@ ISR(TIMER4_OVF_vect)
 
 int main(void)
 {
-	sei();
+	
 	EIMSK=0b00000100;
 	EICRA=0b00110000;
-	
+	sei();
 	//timer
 	//TCCR1A = 0b00000000;
 	//TCCR1B = 0b00000000;

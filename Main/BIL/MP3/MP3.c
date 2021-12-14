@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <stdlib.h>
-//#include "uart_int.h"
+#include "MP3.h"
 #define F_CPU 16000000
 #include <util/delay.h>
 
@@ -66,7 +66,7 @@ void SendChar(char Tegn)
   UDR1 = Tegn;
 }
 
-void startSound()
+void playStart()
 {
 	// Afspil track 1
 	SendChar(0x7E);
@@ -79,7 +79,7 @@ void startSound()
 	SendChar(0xEF);
 }
 
-void gunSound()
+void playReflex()
 {
 	// Afspil track 2
 	SendChar(0x7E);
@@ -92,7 +92,7 @@ void gunSound()
 	SendChar(0xEF);
 }
 
-void endSound()
+void playStop()
 {
 	// Afspil track 3
 	SendChar(0x7E);
