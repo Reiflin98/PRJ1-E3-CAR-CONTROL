@@ -17,13 +17,13 @@ void initMotor(void)
 	TCCR1A = 0b11000011;
 	TCCR1B = 0b00000000;
 	DDRB = 0b11111111;
-	PORTB = 0b00001001;
-	PORTB &= 0b11111110;
+	PORTB = 0b00001100;
+	PORTB &= 0b11111011;
 	
 }
 
 
-void carDrive(int speed, char acceleration)
+void carDrive(int speed, int acceleration)
 {
 
 	if(speed == 100){
@@ -52,7 +52,7 @@ void carDrive(int speed, char acceleration)
 			{
 				OCR1A++;
 				turnOnRearLightBreak();
-				delay_ms(acceleration);
+				delay_us(acceleration);
 			}
 		}
 		
@@ -62,12 +62,12 @@ void carDrive(int speed, char acceleration)
 			{
 				OCR1A++;
 				turnOnRearLightBreak();
-				delay_ms(acceleration);
+				delay_us(acceleration);
 			}
 			else if (OCR1A > requestedSpeed) //hvis bilen kører for langsomt.
 			{
 				OCR1A--;
-				delay_ms(acceleration);
+				delay_us(acceleration);
 			}
 			else //hvis bilens hastighed er korrekt, skal der intet foretages.
 			{
@@ -84,12 +84,12 @@ void carDrive(int speed, char acceleration)
 			{
 				OCR1A++;
 				turnOnRearLightBreak();
-				delay_ms(acceleration);
+				delay_us(acceleration);
 			}
 			else if (OCR1A > requestedSpeed) //hvis bilen kører for langsomt.
 			{
 				OCR1A = OCR1A-1;
-				delay_ms(acceleration);
+				delay_us(acceleration);
 			}
 			else //hvis bilens hastighed er korrekt, skal der intet foretages.
 			{
@@ -106,7 +106,7 @@ void carDrive(int speed, char acceleration)
 			{
 				OCR1A++;
 				turnOnRearLightBreak();
-				delay_ms(acceleration);
+				delay_us(acceleration);
 			}
 		}
 
@@ -120,11 +120,12 @@ void carStop()
 	{
 		OCR1A++;
 		turnOnRearLightBreak();
-		_delay_ms(1);
 	}
 	TCCR1B = (0b11111000 & TCCR1B);
 	return;
 }
+
+
 
 void delay_ms(unsigned char milliseconds)
 {
@@ -132,5 +133,14 @@ void delay_ms(unsigned char milliseconds)
 	{
 		milliseconds--;
 		_delay_ms(1);
+	}
+}
+
+void delay_us(int mikrosekunder)
+{
+	while(mikrosekunder > 0)
+	{
+		mikrosekunder--;
+		_delay_us(1);
 	}
 }
