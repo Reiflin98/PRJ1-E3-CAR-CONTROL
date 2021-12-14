@@ -5,5 +5,8 @@
  *  Author: thoma
  */ 
 
-void InitUART(unsigned long BaudRate, unsigned char DataBit, unsigned char Rx_Int);
+void InitUART(unsigned long BaudRate, unsigned char DataBit);
 void SendChar(char Tegn);
+void startSound(void);
+void gunSound(void);
+void endSound(void);
