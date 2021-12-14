@@ -19,7 +19,7 @@ void turnOnRearLightBreak (void)
 	OCR3A=1023; //100% af 5V hvilket giver 50mA pr. ledsæt
 	
 	TCCR4B |= 0b00000101;
-	TCNT4 = 65500;
+	TCNT4 = 57723;
 }
 
 void turnOnRearLightDrive (void)

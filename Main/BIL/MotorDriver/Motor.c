@@ -46,7 +46,8 @@ void carDrive(int speed, int acceleration)
 		{
 			if (OCR1A == 0x3FF) //tjekker om bilen holder stille.
 			{
-				PORTB = 0b00000000; //clearer bit 3, så bilen bakker. 
+				PORTB &= 0b11110111; //clearer bit 3, så bilen bakker. 
+				turnOnReverse();
 			}
 			else
 			{
@@ -100,7 +101,8 @@ void carDrive(int speed, int acceleration)
 		{
 			if (OCR1A == 0x3FF) //tjekker om bilen holder stille.
 			{
-				PORTB = 0b00001000; //setter bit 3, så bilen køererererer forlæns.
+				PORTB |= 0b00001000; //setter bit 3, så bilen køererererer forlæns.
+				turnOffReverse();
 			}
 			else
 			{
@@ -120,6 +122,9 @@ void carStop()
 	{
 		OCR1A++;
 		turnOnRearLightBreak();
+	}
+	if((PORTB &0b00001000) != 0){ //Hvis bilen bakker og skal stoppe
+		turnOffReverse();
 	}
 	TCCR1B = (0b11111000 & TCCR1B);
 	return;

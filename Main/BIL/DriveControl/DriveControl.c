@@ -20,8 +20,8 @@ extern counter;
 
 void initSystem()
 {
- 	//initFrontLight();
- 	//initRearLight();
+ 	initFrontLight();
+ 	initRearLight();
 // 	initUnderglow();
 // 	initMP3();
 	initMotor();
@@ -39,8 +39,9 @@ void driveControl()
 	//_delay_ms(5000);
 	//playStart();
 	//_delay_ms(5000);
-	//turnOnFront();
-	//turnOnRear();
+	turnOnFront();
+	turnOnRearLightDrive();
+	initRearLight();
 	//
 	do{
 		switch (counter)
@@ -109,7 +110,7 @@ void driveControl()
 	//playStop();
 	//
 	//turnOffUnder();
-	//turnOffFront();
-	//turnOffRear();
+	turnOnFront();
+	turnOffRear();
 	counter = 0;
 }
