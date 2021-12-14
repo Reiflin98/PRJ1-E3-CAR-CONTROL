@@ -55,9 +55,6 @@ ISR(TIMER4_OVF_vect)
 int main(void)
 {
 	
-	EIMSK=0b00000100;
-	EICRA=0b00110000;
-	sei();
 	//timer
 	//TCCR1A = 0b00000000;
 	//TCCR1B = 0b00000000;

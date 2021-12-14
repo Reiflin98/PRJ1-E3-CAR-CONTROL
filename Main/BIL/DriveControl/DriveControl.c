@@ -14,6 +14,7 @@
 #include "../RearLight/RearLight.h"
 #include "../Underglow/Underglow.h"
 #include "../Drivers/switch.h"
+#include <avr/interrupt.h>
 
 
 extern counter;
@@ -26,22 +27,23 @@ void initSystem()
 // 	initUnderglow();
 	initMotor();
 	initSwitchPort();
+	EIMSK=0b00000100;
+	EICRA=0b00110000;
 	
 }
 
 void driveControl()
 {
-	
+	sei();
 	PORTB |= 0b00000100;
 	PORTB &= 0b11111011;
 	int ned_af_bakke = 0;
-	//turnOnUnder();
 	_delay_ms(500);
+	turnOnUnder();
+	turnOnFront();
+	turnOnRearLightDrive();
 	playStart();
 	_delay_ms(4000);
-	turnOnFront();
-	initRearLight();
-	turnOnRearLightDrive();
 	//
 	do{
 		switch (counter)
@@ -106,12 +108,24 @@ void driveControl()
 	}while (counter < 11); //Går ud af do-while når refliksbrik 7 er nået
 	
 	carStop();
-	_delay_ms(100);
+	_delay_ms(550);
 	turnOffFront();
 	turnOffRear();
 	_delay_ms(1000);
 	playStop();
-	//
+	_delay_ms(100);
+	turnOnFront();
+	turnOnRearLightDrive();
+	_delay_ms(100);
+	turnOffFront();
+	turnOffRear();
+	_delay_ms(100);
+	turnOnFront();
+	turnOnRearLightDrive();
+	_delay_ms(100);
+	turnOffFront();
+	turnOffRear();
 	//turnOffUnder();
 	counter = 0;
+	cli();
 }
