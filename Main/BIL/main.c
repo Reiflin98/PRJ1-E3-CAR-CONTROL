@@ -36,6 +36,15 @@ ISR(INT2_vect) //refleks registreret
 	//}
 }
 
+<<<<<<< HEAD
+=======
+ISR(TIMER4_OVF_vect)
+{
+	turnOnRearLightDrive();
+	TCCR4B = 0b00000000;
+}
+
+>>>>>>> 5f48685bc2778b02f9207224087c28e27ebfb478
 //ISR(TIMER1_OVF_vect){
 	//detection = 0;
 	//TCCR1B &= 0b11111000;
