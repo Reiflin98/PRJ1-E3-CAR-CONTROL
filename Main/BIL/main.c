@@ -7,11 +7,10 @@
 
 #include <avr/io.h>
 #include "DriveControl/DriveControl.h"
-#include "Drivers/switch.h"
-#include "FrontLight/FrontLight.h"
 #include "RearLight/RearLight.h"
+#include "Drivers/switch.h"
+#include "MP3/MP3.h"
 #include <avr/interrupt.h>
-
 
 
 // global counter til switch cases
@@ -25,6 +24,7 @@ unsigned char detection = 0;
 ISR(INT2_vect) //refleks registreret
 {
 	counter++;
+	playReflex();
 	//if (detection == 0)
 	//{
 		//counter++;
@@ -54,9 +54,6 @@ ISR(TIMER4_OVF_vect)
 
 int main(void)
 {
-	sei();
-	EIMSK=0b00000100;
-	EICRA=0b00110000;
 	
 	//timer
 	//TCCR1A = 0b00000000;
@@ -70,10 +67,9 @@ int main(void)
 	
 	initSystem();
 	counter = 0;
-	
     while (1) 
     {
-		if (switchOn(1) != 0)
+		if (switchOn(1) != 0 || (PINB & 0b00000010) != 0)
 		{
 			driveControl(); //start driveControl / System
 			// når system færdigt -> afvent nyt tryk 

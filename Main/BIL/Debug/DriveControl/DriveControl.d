@@ -19,7 +19,8 @@ DriveControl/DriveControl.d DriveControl/DriveControl.o: \
  ../DriveControl/../MotorDriver/Motor.h ../DriveControl/../MP3/MP3.h \
  ../DriveControl/../RearLight/RearLight.h \
  ../DriveControl/../Underglow/Underglow.h \
- ../DriveControl/../Drivers/switch.h
+ ../DriveControl/../Drivers/switch.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -62,3 +63,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../DriveControl/../Underglow/Underglow.h:
 
 ../DriveControl/../Drivers/switch.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:

@@ -14,88 +14,96 @@
 #include "../RearLight/RearLight.h"
 #include "../Underglow/Underglow.h"
 #include "../Drivers/switch.h"
+#include <avr/interrupt.h>
 
 
 extern counter;
 
 void initSystem()
 {
+	InitUART(9600, 8);
  	initFrontLight();
  	initRearLight();
 // 	initUnderglow();
-// 	initMP3();
 	initMotor();
 	initSwitchPort();
+	EIMSK=0b00000100;
+	EICRA=0b00110000;
 	
 }
 
 void driveControl()
 {
-	
-	PORTB |= 0b00000001;
-	PORTB &= 0b11111110;
+	if ((EIFR && 0b00000100) != 0)
+	{
+		EIFR |= 0b00000100;
+	}
+	sei();
+	PORTB |= 0b00000100;
+	PORTB &= 0b11111011;
 	int ned_af_bakke = 0;
-	//turnOnUnder();
-	//_delay_ms(5000);
-	//playStart();
-	//_delay_ms(5000);
-	//turnOnFront();
-	//turnOnRear();
+	_delay_ms(500);
+	turnOnUnder();
+	turnOnFront();
+	turnOnRearLightDrive();
+	_delay_ms(100);
+	playStart();
+	_delay_ms(4000);
 	//
 	do{
 		switch (counter)
 		{
 		case 0:
-			carDrive(30,2);
+			carDrive(50,1500);
 			break;
 		
 		case 1: //Brik 1
-			carDrive(50, 4); //Nedsæt hastigheden lidt (Bakke snart)
+			carDrive(60, 2500); //Nedsæt hastigheden lidt (Bakke snart)
 			break;
 			
 		case 2: //Brik 2
-			carDrive(80, 2); //Bakke start - hastighed ydeligere ned
+			carDrive(90, 3000); //Bakke start - hastighed ydeligere ned
 			break;
 			
 		case 3: //Brik 3
-			if (ned_af_bakke < 500)
+			if (ned_af_bakke < 850)
 			{
-				carDrive(-17, 1); //Hastighed ned inden bakken kører ned
+				carDrive(-80, 0); //Hastighed ned inden bakken kører ned
 				ned_af_bakke++;
 				
 			}else{
-				carDrive(30, 7);
+				carDrive(30, 4500);
 			}
 			
 			break;
 		
 			
 		case 4: //Brik 4
-			carDrive(70, 2); //HAstigheden op - bunden af bakken
+			carDrive(70, 1500); //HAstigheden op - bunden af bakken
 			break;
 			
 		case 5: //Brik 5
-			carDrive(50, 8); //hastigheden lidt ned - gør klar til snart at stoppe
+			carDrive(40, 6000); //hastigheden lidt ned - gør klar til snart at stoppe
 			break;
 			
 		case 6: //Brik 6
-			carDrive(-40, 1); //Kør tilbage til refleksbrik 5
+			carDrive(-60, 100); //Kør tilbage til refleksbrik 5
 			break;
 			
 		case 7: //Brik 6
-			carDrive(-50, 2); //Refelksbrik 6 igen
+			carDrive(-60, 1500); //Refelksbrik 6 igen
 			break;
 			
 		case 8: //Brik 5
-			carDrive(70, 1); //Kør frem igen
+			carDrive(70, 200); //Kør frem igen
 			break;
 			
 		case 9: //Brik 5
-			carDrive(70, 2); //Kør frem igen
+			carDrive(70, 1000); //Kør frem igen
 			break;
 			
 		case 10: //Brik 6
-			carDrive(50, 7); //Kør frem igen	
+			carDrive(50, 6000); //Kør frem igen	
 			break;
 			
 			
@@ -105,11 +113,30 @@ void driveControl()
 	}while (counter < 11); //Går ud af do-while når refliksbrik 7 er nået
 	
 	carStop();
+	_delay_ms(550);
+	turnOffFront();
+	turnOffRear();
+	_delay_ms(1000);
+	playStop();
 	
-	//playStop();
-	//
-	//turnOffUnder();
-	//turnOffFront();
-	//turnOffRear();
+	_delay_ms(100);
+	turnOnReverse();
+	turnOnFront();
+	turnOnRearLightDrive();
+	_delay_ms(100);
+	turnOffReverse();
+	turnOffFront();
+	turnOffRear();
+	_delay_ms(100);
+	turnOnReverse();
+	turnOnFront();
+	turnOnRearLightDrive();
+	_delay_ms(100);
+	turnOffReverse();
+	turnOffFront();
+	turnOffRear();
+	
+	turnOffUnder();
 	counter = 0;
+	cli();
 }

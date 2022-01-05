@@ -4,4 +4,5 @@
  *  Author: ****
  */ 
 
-void initUnderglow();
+void turnOnUnder(void);
+void turnOffUnder(void);
