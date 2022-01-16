@@ -32,8 +32,30 @@ void initSystem()
 	
 }
 
+void stopRoutine()
+{
+		_delay_ms(100);
+		turnOnReverse();
+		turnOnFront();
+		turnOnRearLightDrive();
+		_delay_ms(100);
+		turnOffReverse();
+		turnOffFront();
+		turnOffRear();
+		_delay_ms(100);
+		turnOnReverse();
+		turnOnFront();
+		turnOnRearLightDrive();
+		_delay_ms(100);
+		turnOffReverse();
+		turnOffFront();
+		turnOffRear();
+}
+
 void driveControl()
 {
+	counter = 0;
+
 	if ((EIFR && 0b00000100) != 0)
 	{
 		EIFR |= 0b00000100;
@@ -41,9 +63,8 @@ void driveControl()
 	sei();
 	PORTB |= 0b00000100;
 	PORTB &= 0b11111011;
-	int ned_af_bakke = 0;
+	int nedAfBakke = 0;
 	_delay_ms(500);
-	turnOnUnder();
 	turnOnFront();
 	turnOnRearLightDrive();
 	_delay_ms(100);
@@ -66,10 +87,10 @@ void driveControl()
 			break;
 			
 		case 3: //Brik 3
-			if (ned_af_bakke < 850)
+			if (nedAfBakke < 850)
 			{
 				carDrive(-80, 0); //Hastighed ned inden bakken kører ned
-				ned_af_bakke++;
+				nedAfBakke++;
 				
 			}else{
 				carDrive(30, 4500);
@@ -117,26 +138,11 @@ void driveControl()
 	turnOffFront();
 	turnOffRear();
 	_delay_ms(1000);
+	
 	playStop();
 	
-	_delay_ms(100);
-	turnOnReverse();
-	turnOnFront();
-	turnOnRearLightDrive();
-	_delay_ms(100);
-	turnOffReverse();
-	turnOffFront();
-	turnOffRear();
-	_delay_ms(100);
-	turnOnReverse();
-	turnOnFront();
-	turnOnRearLightDrive();
-	_delay_ms(100);
-	turnOffReverse();
-	turnOffFront();
-	turnOffRear();
+	stopRoutine();
+
 	
-	turnOffUnder();
-	counter = 0;
 	cli();
 }

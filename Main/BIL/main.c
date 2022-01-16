@@ -66,7 +66,6 @@ int main(void)
 	//TCCR1B = 0b00000000;
 	
 	initSystem();
-	counter = 0;
     while (1) 
     {
 		if (switchOn(1) != 0 || (PINB & 0b00000010) != 0)

@@ -58,21 +58,6 @@ Discarded input sections
  .text          0x00000000        0x0 FrontLight/FrontLight.o
  .data          0x00000000        0x0 FrontLight/FrontLight.o
  .bss           0x00000000        0x0 FrontLight/FrontLight.o
- .text.initFrontLight
-                0x00000000        0x6 FrontLight/FrontLight.o
- .text.turnOnFront
-                0x00000000        0x8 FrontLight/FrontLight.o
- .text.turnOffFront
-                0x00000000        0x8 FrontLight/FrontLight.o
- .debug_info    0x00000000       0xaf FrontLight/FrontLight.o
- .debug_abbrev  0x00000000       0x51 FrontLight/FrontLight.o
- .debug_aranges
-                0x00000000       0x30 FrontLight/FrontLight.o
- .debug_ranges  0x00000000       0x20 FrontLight/FrontLight.o
- .debug_line    0x00000000       0xd8 FrontLight/FrontLight.o
- .debug_str     0x00000000      0x1bb FrontLight/FrontLight.o
- .comment       0x00000000       0x31 FrontLight/FrontLight.o
- .debug_frame   0x00000000       0x44 FrontLight/FrontLight.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -81,44 +66,30 @@ Discarded input sections
  .text          0x00000000        0x0 MotorDriver/Motor.o
  .data          0x00000000        0x0 MotorDriver/Motor.o
  .bss           0x00000000        0x0 MotorDriver/Motor.o
+ .text.delay_ms
+                0x00000000       0x16 MotorDriver/Motor.o
  .text          0x00000000        0x0 MP3/MP3.o
  .data          0x00000000        0x0 MP3/MP3.o
  .bss           0x00000000        0x0 MP3/MP3.o
- .text.InitUART
-                0x00000000       0xd0 MP3/MP3.o
- .text.SendChar
-                0x00000000        0xe MP3/MP3.o
- .debug_info    0x00000000       0xef MP3/MP3.o
- .debug_abbrev  0x00000000       0x8b MP3/MP3.o
- .debug_loc     0x00000000      0x104 MP3/MP3.o
- .debug_aranges
-                0x00000000       0x28 MP3/MP3.o
- .debug_ranges  0x00000000       0x18 MP3/MP3.o
- .debug_line    0x00000000      0x108 MP3/MP3.o
- .debug_str     0x00000000      0x1b9 MP3/MP3.o
- .comment       0x00000000       0x31 MP3/MP3.o
- .debug_frame   0x00000000       0x58 MP3/MP3.o
  .text          0x00000000        0x0 RearLight/RearLight.o
  .data          0x00000000        0x0 RearLight/RearLight.o
  .bss           0x00000000        0x0 RearLight/RearLight.o
- .text.initRearLight
-                0x00000000       0x18 RearLight/RearLight.o
- .text.turnOffRear
-                0x00000000        0x6 RearLight/RearLight.o
- .text.turnOnReverse
-                0x00000000        0x8 RearLight/RearLight.o
- .text.turnOffReverse
-                0x00000000        0x8 RearLight/RearLight.o
  .text          0x00000000        0x0 Underglow/Underglow.o
  .data          0x00000000        0x0 Underglow/Underglow.o
  .bss           0x00000000        0x0 Underglow/Underglow.o
- .debug_info    0x00000000       0x56 Underglow/Underglow.o
- .debug_abbrev  0x00000000       0x26 Underglow/Underglow.o
+ .text.turnOnUnder
+                0x00000000        0x8 Underglow/Underglow.o
+ .text.turnOffUnder
+                0x00000000        0x8 Underglow/Underglow.o
+ .debug_info    0x00000000       0x99 Underglow/Underglow.o
+ .debug_abbrev  0x00000000       0x51 Underglow/Underglow.o
  .debug_aranges
-                0x00000000       0x18 Underglow/Underglow.o
- .debug_line    0x00000000       0x1a Underglow/Underglow.o
- .debug_str     0x00000000      0x180 Underglow/Underglow.o
+                0x00000000       0x28 Underglow/Underglow.o
+ .debug_ranges  0x00000000       0x18 Underglow/Underglow.o
+ .debug_line    0x00000000       0xc4 Underglow/Underglow.o
+ .debug_str     0x00000000      0x1a1 Underglow/Underglow.o
  .comment       0x00000000       0x31 Underglow/Underglow.o
+ .debug_frame   0x00000000       0x34 Underglow/Underglow.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
@@ -175,8 +146,6 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
  .text.libgcc.mul
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
- .text.libgcc.div
-                0x00000000       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
  .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
  .text.libgcc.prologue
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
@@ -267,6 +236,8 @@ LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/b
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6\libatmega2560.a
 END GROUP
+                0x00000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x00800200]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800200
                 [0x00040000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
                 [0x00002000]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xfe00
                 [0x00001000]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
@@ -365,7 +336,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x8cc
+.text           0x00000000      0xbda
  *(.vectors)
  .vectors       0x00000000       0xe4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
                 0x00000000                __vector_default
@@ -482,107 +453,149 @@ END GROUP
                 0x00000120                . = ALIGN (0x2)
  *(.text.*)
  .text.initSystem
-                0x00000120        0x6 DriveControl/DriveControl.o
+                0x00000120       0x20 DriveControl/DriveControl.o
                 0x00000120                initSystem
+ .text.stopSekvens
+                0x00000140       0x62 DriveControl/DriveControl.o
+                0x00000140                stopSekvens
  .text.driveControl
-                0x00000126       0xcc DriveControl/DriveControl.o
-                0x00000126                driveControl
+                0x000001a2      0x15c DriveControl/DriveControl.o
+                0x000001a2                driveControl
  .text.initSwitchPort
-                0x000001f2        0x4 Drivers/switch.o
-                0x000001f2                initSwitchPort
+                0x000002fe        0x4 Drivers/switch.o
+                0x000002fe                initSwitchPort
  .text.switchOn
-                0x000001f6       0x1e Drivers/switch.o
-                0x000001f6                switchOn
+                0x00000302       0x1e Drivers/switch.o
+                0x00000302                switchOn
+ .text.initFrontLight
+                0x00000320        0x6 FrontLight/FrontLight.o
+                0x00000320                initFrontLight
+ .text.turnOnFront
+                0x00000326        0x8 FrontLight/FrontLight.o
+                0x00000326                turnOnFront
+ .text.turnOffFront
+                0x0000032e        0x8 FrontLight/FrontLight.o
+                0x0000032e                turnOffFront
  .text.__vector_3
-                0x00000214       0x22 main.o
-                0x00000214                __vector_3
+                0x00000336       0x58 main.o
+                0x00000336                __vector_3
  .text.__vector_45
-                0x00000236       0x52 main.o
-                0x00000236                __vector_45
- .text.main     0x00000288       0x1e main.o
-                0x00000288                main
+                0x0000038e       0x52 main.o
+                0x0000038e                __vector_45
+ .text.main     0x000003e0       0x16 main.o
+                0x000003e0                main
  .text.initMotor
-                0x000002a6       0x26 MotorDriver/Motor.o
-                0x000002a6                initMotor
- .text.carStop  0x000002cc       0x38 MotorDriver/Motor.o
-                0x000002cc                carStop
- .text.delay_ms
-                0x00000304       0x16 MotorDriver/Motor.o
-                0x00000304                delay_ms
+                0x000003f6       0x26 MotorDriver/Motor.o
+                0x000003f6                initMotor
+ .text.carStop  0x0000041c       0x30 MotorDriver/Motor.o
+                0x0000041c                carStop
+ .text.delay_us
+                0x0000044c       0x14 MotorDriver/Motor.o
+                0x0000044c                delay_us
  .text.carDrive
-                0x0000031a      0x196 MotorDriver/Motor.o
-                0x0000031a                carDrive
+                0x00000460      0x1a4 MotorDriver/Motor.o
+                0x00000460                carDrive
+ .text.SendChar
+                0x00000604        0xe MP3/MP3.o
+                0x00000604                SendChar
+ .text.InitUART
+                0x00000612       0xd4 MP3/MP3.o
+                0x00000612                InitUART
+ .text.playStart
+                0x000006e6       0x22 MP3/MP3.o
+                0x000006e6                playStart
+ .text.playReflex
+                0x00000708       0x22 MP3/MP3.o
+                0x00000708                playReflex
+ .text.playStop
+                0x0000072a       0x22 MP3/MP3.o
+                0x0000072a                playStop
+ .text.initRearLight
+                0x0000074c       0x18 RearLight/RearLight.o
+                0x0000074c                initRearLight
  .text.turnOnRearLightBreak
-                0x000004b0       0x34 RearLight/RearLight.o
-                0x000004b0                turnOnRearLightBreak
+                0x00000764       0x34 RearLight/RearLight.o
+                0x00000764                turnOnRearLightBreak
  .text.turnOnRearLightDrive
-                0x000004e4       0x18 RearLight/RearLight.o
-                0x000004e4                turnOnRearLightDrive
+                0x00000798       0x18 RearLight/RearLight.o
+                0x00000798                turnOnRearLightDrive
+ .text.turnOffRear
+                0x000007b0        0x6 RearLight/RearLight.o
+                0x000007b0                turnOffRear
+ .text.turnOnReverse
+                0x000007b6        0x8 RearLight/RearLight.o
+                0x000007b6                turnOnReverse
+ .text.turnOffReverse
+                0x000007be        0x8 RearLight/RearLight.o
+                0x000007be                turnOffReverse
  .text.avr-libc.fplib
-                0x000004fc        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
-                0x000004fc                __subsf3
-                0x000004fe                __addsf3
+                0x000007c6        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
+                0x000007c6                __subsf3
+                0x000007c8                __addsf3
  .text.avr-libc.fplib
-                0x00000506       0xc0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3x.o)
-                0x00000520                __addsf3x
+                0x000007d0       0xc0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+                0x000007ea                __addsf3x
  .text.avr-libc.fplib
-                0x000005c6        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
-                0x000005c6                __fixsfsi
+                0x00000890        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+                0x00000890                __fixsfsi
  .text.avr-libc.fplib
-                0x000005d0       0x58 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
-                0x000005d0                __fixunssfsi
+                0x0000089a       0x58 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                0x0000089a                __fixunssfsi
  .text.avr-libc.fplib
-                0x00000628       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(floatsisf.o)
-                0x00000628                __floatunsisf
-                0x0000062c                __floatsisf
+                0x000008f2       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+                0x000008f2                __floatunsisf
+                0x000008f6                __floatsisf
  .text.avr-libc.fplib
-                0x000006a2        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
-                0x000006a2                __fp_inf
+                0x0000096c        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+                0x0000096c                __fp_inf
  .text.avr-libc.fplib
-                0x000006ae        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
-                0x000006ae                __fp_nan
+                0x00000978        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+                0x00000978                __fp_nan
  .text.avr-libc.fplib
-                0x000006b4        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
-                0x000006b4                __fp_pscA
+                0x0000097e        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+                0x0000097e                __fp_pscA
  .text.avr-libc.fplib
-                0x000006c2        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
-                0x000006c2                __fp_pscB
+                0x0000098c        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+                0x0000098c                __fp_pscB
  .text.avr-libc.fplib
-                0x000006d0       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
-                0x000006d0                __fp_round
+                0x0000099a       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+                0x0000099a                __fp_round
  .text.avr-libc.fplib
-                0x000006f2       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
-                0x000006f2                __fp_split3
-                0x00000702                __fp_splitA
+                0x000009bc       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                0x000009bc                __fp_split3
+                0x000009cc                __fp_splitA
  .text.avr-libc.fplib
-                0x00000736        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
-                0x00000736                __fp_zero
-                0x00000738                __fp_szero
+                0x00000a00        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                0x00000a00                __fp_zero
+                0x00000a02                __fp_szero
  .text.avr-libc.fplib
-                0x00000744        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
-                0x00000744                __mulsf3
+                0x00000a0e        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                0x00000a0e                __mulsf3
  .text.avr-libc.fplib
-                0x00000748       0xc2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
-                0x0000075c                __mulsf3x
-                0x00000760                __mulsf3_pse
+                0x00000a12       0xc2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                0x00000a26                __mulsf3x
+                0x00000a2a                __mulsf3_pse
  .text.avr-libc.fplib
-                0x0000080a       0x84 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(sqrt.o)
-                0x00000812                sqrtf
-                0x00000812                sqrt
+                0x00000ad4       0x84 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(sqrt.o)
+                0x00000adc                sqrtf
+                0x00000adc                sqrt
  .text.avr-libc.fplib
-                0x0000088e       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_mpack.o)
-                0x0000088e                __fp_mpack
-                0x00000892                __fp_mpack_finite
+                0x00000b58       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_mpack.o)
+                0x00000b58                __fp_mpack
+                0x00000b5c                __fp_mpack_finite
  .text.avr-libc.fplib
-                0x000008aa        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_norm2.o)
-                0x000008aa                __fp_norm2
- .text.libgcc   0x000008b8       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
-                0x000008b8                __tablejump2__
-                0x000008c8                . = ALIGN (0x2)
+                0x00000b74        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a(fp_norm2.o)
+                0x00000b74                __fp_norm2
+ .text.libgcc.div
+                0x00000b82       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
+                0x00000b82                __udivmodsi4
+ .text.libgcc   0x00000bc6       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+                0x00000bc6                __tablejump2__
+                0x00000bd6                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000008c8        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                0x000008c8                _exit
-                0x000008c8                exit
+ .fini9         0x00000bd6        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00000bd6                _exit
+                0x00000bd6                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -601,11 +614,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000008c8        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .fini0         0x00000bd6        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x000008cc                _etext = .
+                0x00000bda                _etext = .
 
-.data           0x00800200        0x0 load address 0x000008cc
+.data           0x00800200        0x0 load address 0x00000bda
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -625,8 +638,8 @@ END GROUP
                 0x00800200                counter
  *(COMMON)
                 0x00800201                PROVIDE (__bss_end, .)
-                0x000008cc                __data_load_start = LOADADDR (.data)
-                0x000008cc                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000bda                __data_load_start = LOADADDR (.data)
+                0x00000bda                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800201        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -677,9 +690,11 @@ END GROUP
  .comment       0x00000000       0x30 DriveControl/DriveControl.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 Drivers/switch.o
- .comment       0x00000030       0x30 main.o
+ .comment       0x00000030       0x30 FrontLight/FrontLight.o
                                  0x31 (size before relaxing)
+ .comment       0x00000060       0x31 main.o
  .comment       0x00000060       0x31 MotorDriver/Motor.o
+ .comment       0x00000060       0x31 MP3/MP3.o
  .comment       0x00000060       0x31 RearLight/RearLight.o
 
 .note.gnu.avr.deviceinfo
@@ -702,77 +717,94 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x108
+.debug_aranges  0x00000000      0x188
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x28 DriveControl/DriveControl.o
+                0x00000000       0x30 DriveControl/DriveControl.o
  .debug_aranges
-                0x00000028       0x30 Drivers/switch.o
+                0x00000030       0x30 Drivers/switch.o
  .debug_aranges
-                0x00000058       0x30 main.o
+                0x00000060       0x30 FrontLight/FrontLight.o
  .debug_aranges
-                0x00000088       0x38 MotorDriver/Motor.o
+                0x00000090       0x30 main.o
  .debug_aranges
-                0x000000c0       0x48 RearLight/RearLight.o
+                0x000000c0       0x40 MotorDriver/Motor.o
+ .debug_aranges
+                0x00000100       0x40 MP3/MP3.o
+ .debug_aranges
+                0x00000140       0x48 RearLight/RearLight.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x13f2
+.debug_info     0x00000000     0x1dd4
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_info    0x00000bbc      0x272 DriveControl/DriveControl.o
- .debug_info    0x00000e2e       0xd4 Drivers/switch.o
- .debug_info    0x00000f02      0x149 main.o
- .debug_info    0x0000104b      0x2ab MotorDriver/Motor.o
- .debug_info    0x000012f6       0xfc RearLight/RearLight.o
+ .debug_info    0x00000bbc      0x69c DriveControl/DriveControl.o
+ .debug_info    0x00001258       0xd4 Drivers/switch.o
+ .debug_info    0x0000132c       0xaf FrontLight/FrontLight.o
+ .debug_info    0x000013db      0x164 main.o
+ .debug_info    0x0000153f      0x40b MotorDriver/Motor.o
+ .debug_info    0x0000194a      0x38e MP3/MP3.o
+ .debug_info    0x00001cd8       0xfc RearLight/RearLight.o
 
-.debug_abbrev   0x00000000      0xf1b
+.debug_abbrev   0x00000000     0x10c1
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0xb1a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_abbrev  0x00000b1a       0xbf DriveControl/DriveControl.o
- .debug_abbrev  0x00000bd9       0x9f Drivers/switch.o
- .debug_abbrev  0x00000c78       0xd8 main.o
- .debug_abbrev  0x00000d50      0x17a MotorDriver/Motor.o
- .debug_abbrev  0x00000eca       0x51 RearLight/RearLight.o
+ .debug_abbrev  0x00000b1a      0x142 DriveControl/DriveControl.o
+ .debug_abbrev  0x00000c5c       0x9f Drivers/switch.o
+ .debug_abbrev  0x00000cfb       0x51 FrontLight/FrontLight.o
+ .debug_abbrev  0x00000d4c       0xc0 main.o
+ .debug_abbrev  0x00000e0c      0x19d MotorDriver/Motor.o
+ .debug_abbrev  0x00000fa9       0xc7 MP3/MP3.o
+ .debug_abbrev  0x00001070       0x51 RearLight/RearLight.o
 
-.debug_line     0x00000000      0xa2b
+.debug_line     0x00000000      0xf3f
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1fa C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_line    0x000001fa      0x1d5 DriveControl/DriveControl.o
- .debug_line    0x000003cf       0xf3 Drivers/switch.o
- .debug_line    0x000004c2      0x15e main.o
- .debug_line    0x00000620      0x2bb MotorDriver/Motor.o
- .debug_line    0x000008db      0x150 RearLight/RearLight.o
+ .debug_line    0x000001fa      0x3d5 DriveControl/DriveControl.o
+ .debug_line    0x000005cf       0xf3 Drivers/switch.o
+ .debug_line    0x000006c2       0xd8 FrontLight/FrontLight.o
+ .debug_line    0x0000079a      0x170 main.o
+ .debug_line    0x0000090a      0x2fc MotorDriver/Motor.o
+ .debug_line    0x00000c06      0x1e9 MP3/MP3.o
+ .debug_line    0x00000def      0x150 RearLight/RearLight.o
 
-.debug_frame    0x00000000      0x21c
+.debug_frame    0x00000000      0x340
  *(.debug_frame)
- .debug_frame   0x00000000       0x40 DriveControl/DriveControl.o
- .debug_frame   0x00000040       0x44 Drivers/switch.o
- .debug_frame   0x00000084       0x9c main.o
- .debug_frame   0x00000120       0x88 MotorDriver/Motor.o
- .debug_frame   0x000001a8       0x74 RearLight/RearLight.o
+ .debug_frame   0x00000000       0x50 DriveControl/DriveControl.o
+ .debug_frame   0x00000050       0x44 Drivers/switch.o
+ .debug_frame   0x00000094       0x44 FrontLight/FrontLight.o
+ .debug_frame   0x000000d8       0xd4 main.o
+ .debug_frame   0x000001ac       0x9c MotorDriver/Motor.o
+ .debug_frame   0x00000248       0x84 MP3/MP3.o
+ .debug_frame   0x000002cc       0x74 RearLight/RearLight.o
 
-.debug_str      0x00000000      0x771
+.debug_str      0x00000000      0x8b0
  *(.debug_str)
  .debug_str     0x00000000      0x3e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_str     0x000003e6      0x1b1 DriveControl/DriveControl.o
-                                0x1e5 (size before relaxing)
- .debug_str     0x00000597       0x39 Drivers/switch.o
+ .debug_str     0x000003e6      0x2cb DriveControl/DriveControl.o
+                                0x2ff (size before relaxing)
+ .debug_str     0x000006b1       0x86 Drivers/switch.o
                                 0x1b7 (size before relaxing)
- .debug_str     0x000005d0       0x9d main.o
-                                0x1e8 (size before relaxing)
- .debug_str     0x0000066d       0xb4 MotorDriver/Motor.o
-                                0x24c (size before relaxing)
- .debug_str     0x00000721       0x50 RearLight/RearLight.o
+ .debug_str     0x00000737       0x71 FrontLight/FrontLight.o
+                                0x1bb (size before relaxing)
+ .debug_str     0x000007a8       0x3d main.o
+                                0x1ea (size before relaxing)
+ .debug_str     0x000007e5       0x86 MotorDriver/Motor.o
+                                0x28a (size before relaxing)
+ .debug_str     0x0000086b       0x2c MP3/MP3.o
+                                0x1d0 (size before relaxing)
+ .debug_str     0x00000897       0x19 RearLight/RearLight.o
                                 0x1fb (size before relaxing)
 
-.debug_loc      0x00000000      0x348
+.debug_loc      0x00000000      0x71f
  *(.debug_loc)
- .debug_loc     0x00000000       0x53 DriveControl/DriveControl.o
- .debug_loc     0x00000053       0x4d Drivers/switch.o
- .debug_loc     0x000000a0      0x107 main.o
- .debug_loc     0x000001a7      0x1a1 MotorDriver/Motor.o
+ .debug_loc     0x00000000      0x293 DriveControl/DriveControl.o
+ .debug_loc     0x00000293       0x4d Drivers/switch.o
+ .debug_loc     0x000002e0      0x196 main.o
+ .debug_loc     0x00000476      0x1de MotorDriver/Motor.o
+ .debug_loc     0x00000654       0xcb MP3/MP3.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -792,13 +824,15 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xb8
+.debug_ranges   0x00000000      0x118
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x18 DriveControl/DriveControl.o
- .debug_ranges  0x00000018       0x20 Drivers/switch.o
- .debug_ranges  0x00000038       0x20 main.o
- .debug_ranges  0x00000058       0x28 MotorDriver/Motor.o
- .debug_ranges  0x00000080       0x38 RearLight/RearLight.o
+ .debug_ranges  0x00000000       0x20 DriveControl/DriveControl.o
+ .debug_ranges  0x00000020       0x20 Drivers/switch.o
+ .debug_ranges  0x00000040       0x20 FrontLight/FrontLight.o
+ .debug_ranges  0x00000060       0x20 main.o
+ .debug_ranges  0x00000080       0x30 MotorDriver/Motor.o
+ .debug_ranges  0x000000b0       0x30 MP3/MP3.o
+ .debug_ranges  0x000000e0       0x38 RearLight/RearLight.o
 
 .debug_macro
  *(.debug_macro)
